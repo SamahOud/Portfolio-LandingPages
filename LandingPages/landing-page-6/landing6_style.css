@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: #000000;
+    direction: rtl;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 35px;
+    padding-left: 28%;
+}
+
+span { color: #F50B33; }
+
+p { margin-bottom: 35px; }
+
+p, label { color: #2C2C2C; }
+
+label, input { display: block; } 
+
+button {
+    height: 40px;
+    font-size: 1.1em;
+    padding: 5px 35px;
+    color: aliceblue;
+    margin-top: 20px;
+    border: none;
+    background-color: #F50B33;
+}
+
+/* ======== Class's ======== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.img-style { 
+    max-height: 600px; 
+    object-fit: cover;
+}
+
+.input {
+    border: none;
+    border-radius: 0%;
+    border-bottom: 5px solid #F50B33;
+    background-color: #F6F6F6;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 15px;
+    text-align: end;
+}
+
+
+/* ======== Media's ======== */
+/* Applies styles to elements when the screen width is between 350px to 600px*/
+@media screen and (min-width: 350px) and (max-width: 600px) {
+    
+  
+}
+  
+  
+/* Applies styles to elements when the screen width is between 601px to 992px*/
+ @media screen and (min-width: 601px) and (max-width: 992px) {
+    
+}
+
+
+/* ======== Media's ======== */
+/* X-Small device (portrait phones, less than 576px) */
+@media screen and (min-width: 340px) and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        text-align: right;
+        margin-bottom: 50px;
+    }
+    
+    img { width: 100%; }
+
+    .div-1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        padding-right: 18%;
+        padding-left: 11%;
+        font-size: 2.3em;
+    }
+
+    button { width: -webkit-fill-available;}
+
+    .input { width: 320px;}
+}
+
+/* Small device (landscap phone, 576px and up) 576px to 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        text-align: right;
+        margin-bottom: 50px;
+    }
+    
+    img { width: 100%; }
+
+    .div-1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        padding-right: 18%;
+        padding-left: 11%;
+        font-size: 2.3em;
+    }
+
+    button { width: -webkit-fill-available;}
+
+    .input { width: 320px;}
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    img { width: 100%; }
+
+    h1 {
+        padding-right: 11%;
+        padding-left: 17%;
+    }
+
+    p { margin-left: 67px; }
+
+    button { width: -webkit-fill-available; }
+
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        text-align: right;
+        margin-bottom: 50px;
+    }
+
+    .div-1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* Large device (desktops, 992px and up) 992px to 1200px */
+/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+} */

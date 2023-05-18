@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: #071192;
+    direction: rtl;
+}
+
+h1 {
+    margin-bottom: 15px;
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+p {
+    margin-bottom: 35px;
+    padding-left: 38px;
+}
+
+p, label {
+    color: #2C2C2C;
+}
+
+.btn-submit {
+    width: 110px;
+    height: 32px;
+    color: #FFFFFF;
+    background: #071192;
+}
+
+
+/* ======== Class's ======== */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.div-1 {
+    position: absolute;
+    right: 4%;
+    top: 12%;
+    background-color: #EEEEEED1;
+    padding: 20px 50px;
+    height: 500px;
+    width: 465px;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0%;
+    border-bottom: 5px solid #071192;
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+    text-align: end;
+}
+ 
+
+/* ======== Media's ======== */
+/* X-Small device (portrait phones, less than 576px) */
+@media screen and (min-width: 340px) and (max-width: 576px) {
+    .div-1 {
+        width: auto;
+        top: 105%;
+        padding: 20px 12px;
+        transform: translate(10px);
+    }
+
+    h1 { padding: 0; }
+
+    .btn-submit {
+        width: -webkit-fill-available;
+    }
+}
+
+/* Small device (landscap phone, 576px and up) 576px to 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .div-1 {
+        width: auto;
+        top: 105%;
+        transform: translate(10px);
+    }
+
+    h1 { padding: 0; }
+
+    .btn-submit { width: -webkit-fill-available; }
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    p {
+        margin: 0 0 0 100px;
+        padding: 0 0 30px 100px;
+    }
+    
+    .div-1 {
+        width: auto;
+        top: 105%;
+        transform: translate(14px);
+    }
+
+    .form-control { width: 65%; }
+}
+
+/* Large device (desktops, 992px and up) 992px to 1200px */
+/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+} */

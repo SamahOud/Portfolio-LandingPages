@@ -1,0 +1,28 @@
+// Mixin is function, but it returns CSS code
+/**  Your Mixin can have parameters and you can pass 
+   * them when you call the mixin in your code
+*/
+
+@use "colors" as systemColors;
+
+@mixin getFont($fontSize, $color) {
+    font-size: $fontSize;
+    color: $color;
+}
+
+@mixin getPadding($paddingBotton) {
+    padding-bottom: $paddingBotton;
+}
+
+@mixin getButtonStyle($background) {
+    color: systemColors.$doctor-color;
+    padding: 7px 30px;
+    margin-top: 10px;
+    border: none;
+    background: $background;
+}
+
+@mixin getWidthHeight($width, $height) {
+    width: $width;
+    height: $height;
+}

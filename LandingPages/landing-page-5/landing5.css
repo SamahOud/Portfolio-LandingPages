@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/**  Your Mixin can have parameters and you can pass 
+   * them when you call the mixin in your code
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background-image: url(./images/bg-pink.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 475px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .container {
+  direction: rtl;
+}
+body .container .div_1 {
+  position: absolute;
+  top: 120px;
+  margin-right: 220px;
+  background-color: rgba(26, 26, 26, 0.831372549);
+  padding: 0 40px;
+  padding-top: 60px;
+  width: 420px;
+  height: 500px;
+}
+body .container .div_1 h1 {
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-bottom: 15px;
+}
+body .container .div_1 p {
+  color: #F9F9F9;
+  padding-bottom: 30px;
+}
+body .container .div_1 form div label {
+  display: flex;
+  flex-direction: column;
+  color: #F9F9F9;
+}
+body .container .div_1 input {
+  width: 340px;
+  height: 40px;
+  margin-bottom: 20px;
+  text-align: end;
+  padding: 8px 20px;
+}
+body .container .div_1 button {
+  color: #F9F9F9;
+  padding: 7px 30px;
+  margin-top: 10px;
+  border: none;
+  background: #D31C75;
+}
+
+body {
+  /* X-Small device (portrait phones, less than 576px) */
+  /* Small device (landscap phone, 576px and up) 576px to 768px */
+}
+@media (min-width: 340px) and (max-width: 576px) {
+  body {
+    background-image: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+}
+
+body .container {
+  /* X-Small device (portrait phones, less than 576px) */
+  /* Small device (landscap phone, 576px and up) 576px to 768px */
+}
+@media (min-width: 340px) and (max-width: 576px) {
+  body .container {
+    background-image: url(./images/bg_pink2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 265px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body .container {
+    background-image: url(./images/bg_pink2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 250px;
+  }
+}
+
+body .container .div_1 {
+  /* X-Small device (portrait phones, less than 576px) */
+  /* Small device (landscap phone, 576px and up) 576px to 768px */
+}
+@media (min-width: 340px) and (max-width: 576px) {
+  body .container .div_1 {
+    top: 100px;
+    width: 310px;
+    margin: 15px;
+    padding: 0 16px;
+    padding-top: 60px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body .container .div_1 {
+    top: 100px;
+    width: 362px;
+    margin-right: 5%;
+  }
+}
+
+body .container .div_1 h1 {
+  /* X-Small device (portrait phones, less than 576px) */
+  /* Small device (landscap phone, 576px and up) 576px to 768px */
+}
+@media (min-width: 340px) and (max-width: 576px) {
+  body .container .div_1 h1 {
+    text-align: center;
+    padding: 0 20px 25px;
+    line-height: 1.1;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body .container .div_1 h1 {
+    text-align: center;
+    padding: 0 1px 25px;
+    line-height: 1.1;
+  }
+}
+
+body .container .div_1 p {
+  /* X-Small device (portrait phones, less than 576px) */
+  /* Small device (landscap phone, 576px and up) 576px to 768px */
+}
+@media (min-width: 340px) and (max-width: 576px) {
+  body .container .div_1 p {
+    text-align: center;
+    padding: 0 15px 25px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body .container .div_1 p {
+    text-align: center;
+    padding: 0 1px 25px;
+  }
+}
+
+body .container .div_1 input {
+  /* X-Small device (portrait phones, less than 576px) */
+  /* Small device (landscap phone, 576px and up) 576px to 768px */
+}
+@media (min-width: 340px) and (max-width: 576px) {
+  body .container .div_1 input {
+    width: 270px;
+    border: 1px solid #D31C75;
+    border-radius: 0%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body .container .div_1 input {
+    width: 280px;
+    border: 1px solid #D31C75;
+    border-radius: 0%;
+  }
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+/* Large device (desktops, 992px and up) 992px to 1200px */
+/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+} *//*# sourceMappingURL=landing5.css.map */

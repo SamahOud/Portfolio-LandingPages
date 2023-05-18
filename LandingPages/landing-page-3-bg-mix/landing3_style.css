@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    direction: rtl;
+    background-image: linear-gradient(to top, #2DFF8C, #281EFF);
+    color: #FFFFFF;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 9em;
+}
+
+h1, h2 { margin: 30px 0; }
+
+.container { height: 100vh; }
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10rem;
+}
+
+p, label { color: #F9F9F9; }
+
+.container form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form .fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .fields .input-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 430px;
+    padding: 0 35px;
+}
+
+.input {
+    border: 3px solid #FFFFFF;
+    border-radius: 0%;
+    /* A transparent background has nothing in the background 
+    pixels, allowing what's behind it to show through. */
+    background: transparent;
+    text-align: end;
+    padding: 8px 20px;
+}
+
+button {
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 0;
+    color: #1C1C1C;
+    border: none;
+    background-color: #FFFFFF;
+    width: 250px;
+}
+
+
+/* ======== Media's ======== */
+/* X-Small device (portrait phones, less than 576px) */
+@media screen and (min-width: 340px) and (max-width: 576px) {
+    h1 {font-size: 4em;}
+
+    h2 { font-size: 1.1em; }
+    
+    form .fields .input-field { width: 370px;}
+
+    button { 
+        position: relative;
+        margin: 10px auto;
+        width: -webkit-fill-available;
+        color: #2823FD;
+    }
+
+    .text {
+        padding: 35px 10px;
+        text-align: center;
+    }
+    
+    .container form .fields { flex-direction: column; }
+}
+
+/* Small device (landscap phone, 576px and up) 576px to 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    h1 { font-size: 7em; }
+
+    h2 { font-size: 1.5em; }
+    
+    button { 
+        position: relative;
+        margin: 10px auto;
+        width: -webkit-fill-available;
+        color: #2823FD;
+    }
+    
+    .text {
+        padding-top: 15%;
+        text-align: center;
+    }
+
+    .container form .fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .container form .fields { flex-direction: column; }
+
+    button { 
+        position: relative;
+        margin: 10px auto;
+        width: -webkit-fill-available;
+    }
+}
+
+/* Large device (desktops, 992px and up) 992px to 1200px */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    form .fields .input-field:first-of-type { margin-right: 150px; }
+}

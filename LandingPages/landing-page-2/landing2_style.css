@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: #020253;
+    direction: rtl;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+p { margin-bottom: 35px;}
+
+label, input { display: block;} 
+
+input {
+    border: none;
+    border-bottom: 5px solid #020253;
+    background-color: #F6F6F6;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 15px;
+    text-align: end;
+    padding: 5px 20px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    color: aliceblue;
+    border: none;
+    font-size: 1.1em;
+    background-color: #020253;
+    cursor: pointer;
+}
+
+/* ======== Class's ======== */
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    gap: 120px;
+}
+
+.div { margin: 25px 18px;}
+
+.img-style {
+    max-width: 700px;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+
+/* ======== Media's ======== */
+/* X-Small device (portrait phones, less than 576px) */
+@media screen and (min-width: 340px) and (max-width: 576px) {
+    img { width: 100%; }
+
+    h1 { font-size: 1.9em; }
+
+    input {
+        display: block;
+        width: -webkit-fill-available;
+    }
+
+    button { width: -webkit-fill-available;}
+
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        margin: auto;
+    }
+
+    .div-1 { margin: 15px 18px; }
+}
+
+/* Small device (landscap phone, 576px and up) 576px to 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    img {width: 100%; }
+
+    input {
+        display: block;
+        width: -webkit-fill-available;
+    }
+
+    button { width: -webkit-fill-available;}
+
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+  
+    .div-1 {margin: 15px 25px; }
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    img { width: 100%;
+    }
+
+    button { width: -webkit-fill-available;}
+
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}
+
+/* Large device (desktops, 992px and up) 992px to 1200px */
+/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+} */

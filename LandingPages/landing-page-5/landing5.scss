@@ -1,0 +1,178 @@
+@use "_colors" as systemColors;
+@use "_mixin" as *;
+@use "_breakPoints" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+}
+
+// Here you can use your variables from _colors.scss
+
+
+// Here you can use your mixin and pass parameters from _mixin.scss 
+
+
+// Nesting in SCSS is a way to write CSS code in a more readable way.
+// You can nest your CSS selectors inside each other.
+
+
+body {
+    background-image: url(./images/bg-pink.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 475px;
+    object-fit: cover;
+
+    .container {
+        direction: rtl;
+
+        .div_1 {
+            position: absolute;
+            top: 120px;
+            margin-right: 220px;
+            background-color: #1A1A1AD4;
+            padding: 0 40px;
+            padding-top: 60px;
+            @include getWidthHeight(420px, 500px);
+
+            h1 {
+                @include getFont(30px, systemColors.$white-color);
+                @include getPadding(15px);
+            }
+        
+            p {
+                color: systemColors.$doctor-color;
+                @include getPadding(30px);
+            }
+
+            form div label {
+                display: flex;
+                flex-direction: column;
+                color: systemColors.$doctor-color;
+            }
+
+            input {
+                @include getWidthHeight(340px, 40px);
+                margin-bottom: 20px;
+                text-align: end;
+                padding: 8px 20px;
+            }
+        
+            button {
+                @include getButtonStyle(systemColors.$princeCharming-color);
+            }
+        }
+    }
+}
+
+// This is how you can use MEDIA QUERIES in SCSS
+// You can use the breakPoints from _breakPoints.scss
+
+body {
+    /* X-Small device (portrait phones, less than 576px) */
+    @media (min-width: $x-small) and (max-width: $sm) {
+        background-image: none;
+    }
+
+    /* Small device (landscap phone, 576px and up) 576px to 768px */
+    @media (min-width: $sm) and (max-width: $me) {
+        background-image: none;
+    }
+}
+
+body .container {
+    /* X-Small device (portrait phones, less than 576px) */
+    @media (min-width: $x-small) and (max-width: $sm) {
+        background-image: url(./images/bg_pink2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        object-fit: cover;
+        height: 265px;
+    }
+
+    /* Small device (landscap phone, 576px and up) 576px to 768px */
+    @media (min-width: $sm) and (max-width: $me) {
+        background-image: url(./images/bg_pink2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        object-fit: cover;
+        height: 250px;
+    }
+}
+
+body .container .div_1 {
+    /* X-Small device (portrait phones, less than 576px) */
+    @media (min-width: $x-small) and (max-width: $sm) {
+        top: 100px;
+        width: 310px;
+        margin: 15px;
+        padding: 0 16px;
+        padding-top: 60px;
+    }
+
+    /* Small device (landscap phone, 576px and up) 576px to 768px */
+    @media (min-width: $sm) and (max-width: $me) {
+        top: 100px;
+        width: 362px;
+        margin-right: 5%;
+    }
+}
+
+body .container .div_1 h1 {
+    /* X-Small device (portrait phones, less than 576px) */
+    @media (min-width: $x-small) and (max-width: $sm) {
+        text-align: center;
+        padding: 0 20px 25px;
+        line-height: 1.1;
+    }
+
+    /* Small device (landscap phone, 576px and up) 576px to 768px */
+    @media (min-width: $sm) and (max-width: $me) {
+        text-align: center;
+        padding: 0 1px 25px;
+        line-height: 1.1;
+    }
+}
+
+body .container .div_1 p {
+    /* X-Small device (portrait phones, less than 576px) */
+    @media (min-width: $x-small) and (max-width: $sm) {
+        text-align: center;
+        padding: 0 15px 25px;
+    }
+
+    /* Small device (landscap phone, 576px and up) 576px to 768px */
+    @media (min-width: $sm) and (max-width: $me) {
+        text-align: center;
+        padding: 0 1px 25px;
+    }
+}
+
+body .container .div_1 input {
+    /* X-Small device (portrait phones, less than 576px) */
+    @media (min-width: $x-small) and (max-width: $sm) {
+        width: 270px;
+        border: 1px solid systemColors.$princeCharming-color;
+        border-radius: 0%;
+    }
+
+    /* Small device (landscap phone, 576px and up) 576px to 768px */
+    @media (min-width: $sm) and (max-width: $me) {
+        width: 280px;
+        border: 1px solid systemColors.$princeCharming-color;
+        border-radius: 0%;
+    }
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+// @media screen and (min-width: 768px) and (max-width: 992px) {
+    
+// }
+
+/* Large device (desktops, 992px and up) 992px to 1200px */
+/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+} */

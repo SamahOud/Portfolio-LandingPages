@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+    object-fit: cover;
+}
+
+h1 { 
+    color: #D3E10E;
+    font-size: 5em;
+    padding-bottom: 15px;
+}
+
+p { color: #F9F9F9; }
+
+label, button { color: #011560; } 
+
+button {
+    padding: 10px 50px;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    font-weight: 800;
+    background-color: #D3E10E;
+}
+
+.container-1 {
+    height: 100vh;
+    position: relative;
+}
+
+.div_image {
+    width: auto;
+    height: auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8.7rem;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    left: 50px;
+}
+
+.container-1 form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-1 form .fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .fields .input-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.input {
+    border: none;
+    border-radius: 0%;
+    border-bottom: 5px solid #D3E10E;
+    background-color: #E5EEFF;
+    width: 300px;
+    text-align: end;
+    padding: 8px 20px;
+}
+
+
+/* ======== Media's ======== */
+/* X-Small device (portrait phones, less than 576px) */
+@media screen and (min-width: 340px) and (max-width: 576px) {
+    img { height: 45vh; }
+
+    h1 { font-size: 1.9em; }
+
+    p { 
+        padding: 0 45px;
+        text-align: center;
+    }
+
+    button { 
+        position: relative;
+        margin: 10px auto;
+        width: 300px;
+    }
+
+    .text {
+        right: 20px;
+        left: 20px;
+        padding-top: 7rem;
+    }
+
+    .container-1 form .fields {
+        flex-direction: column;
+        transform: translate(0, 10px);
+    }
+}
+
+/* Small device (landscap phone, 576px and up) 576px to 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    img { height: 50vh; }
+
+    h1 { font-size: 2.4em; }
+
+    p { text-align: center; }
+
+    button { 
+        position: relative;
+        margin: 10px auto;
+        width: 300px;
+    }
+
+    .container-1 form .fields {
+        flex-direction: column;
+        transform: translate(0, 10px);
+    }
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    img { height: 55vh; }
+
+    h1 { font-size: 3.3em; }
+}
+
+/* Large device (desktops, 992px and up) 992px to 1200px */
+/* @media screen and (min-width: 992px) and (max-width: 1200px) {
+} */
