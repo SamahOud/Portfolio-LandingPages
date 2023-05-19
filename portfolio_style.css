@@ -379,7 +379,7 @@ hr {
 
 /* ======== Media's ======== */
 /* X-Small device (portrait phones, less than 576px) */
-@media screen and (min-width: 340px) and (max-width: 576px) {
+@media screen and (min-width: 330px) and  (max-width: 576px) {
     .nav_menu {
         width: 100%;
         text-align: center;
@@ -431,11 +431,16 @@ hr {
 
     .footer-div-icons {
         display: grid;
-        grid-template-columns: 200px 200px;
+        grid-template-columns: 150px 150px;
         justify-content: center;
     }
 
-    .box { margin: 20px;}
+    .box { 
+        margin: 20px;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
     .footer-div-span {
         padding: 10px 5px;
