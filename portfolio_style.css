@@ -85,10 +85,10 @@ textarea { min-height: 100px; }
 .my-name {
     font-family: 'Satisfy', cursive;
     font-weight: bold;
-    font-size: 2rem;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-top: 15px;
+    font-size: 1.5rem;
+    display: inline-flex;
+    gap: 5px;
+    align-items: end;
 }
 
 .nav_menu  {
@@ -172,8 +172,8 @@ textarea { min-height: 100px; }
     text-align: justify;
 }
 
-/* ***** Main Section CVV ***** */
-.article_cvv {
+/* ***** Main Section CV ***** */
+.article_cv {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -182,19 +182,20 @@ textarea { min-height: 100px; }
     padding: 35px 15%;
 }
 
-.img-cvv {
+.img-cv {
     transform: rotate(-20deg);
     width: 115px;
     height: 110px;
 }
 
-.div-cvv { direction: rtl; }
+.div-cv { direction: rtl; }
 
-.text-cvv { margin-bottom: 25px; }
+.text-cv { margin-bottom: 25px; }
 
-.btn-cvv {
+.btn {
     display: inline-flex;
     flex-direction: row-reverse;
+    align-items: center;
     gap: 10px;
     margin-top: 20px;
     padding: 10px 15px;
@@ -203,11 +204,13 @@ textarea { min-height: 100px; }
     background-color: #1AE0EC;
     color: #2F2E2E;
     font-weight: bold;
+    letter-spacing: .1rem;
+    text-decoration: none;
     cursor: pointer;
     transition: 0.8s ease;
 }
 
-.btn-cvv:hover {
+.btn:hover {
     color: #f3f3f3;
     background-color: lightseagreen;
     transform: scale(1.1);
