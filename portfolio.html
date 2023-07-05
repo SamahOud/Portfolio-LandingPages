@@ -24,25 +24,21 @@
     <!-- ============= Header ============= -->
     <header>
         <!-- ***** Header Nav Bar ***** -->
+        <nav class="navbar" onclick="toggle()">
+            <ul>
+                <li><a class="menu"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#home" class="active">ראשי</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+
         <div class="titles">
             <a href="#home" class="my-name">
                 <img class="logo" src="./assets/icons/business-women.png" alt="logo">
                 Samah Abu Sheacha
             </a>
-        </div>
-
-        <nav>
-            <ul class="nav_menu">
-                <li><a href="#home" class="active">ראשי</a></li>
-                <li><a href="#about">אודות</a></li>
-                <li><a href="#gallery">גלריה</a></li>
-                <li><a href="#contact">צור קשר</a></li>
-                <span></span>
-            </ul>
-        </nav>
-
-        <div class="menu">
-            <img class="menu_line" src="./assets/icons/menu.png" alt="menu">
         </div>
     </header>
 
@@ -310,8 +306,8 @@
             
             <form id="my-form" action="mailto:samahoud92@gmail.com" method="post">
                 <div class="form-control">
-                    <label for="fullname">שם</label>
-                    <input type="text" id="fullname" name="fullname" required placeholder="שם">
+                    <label for="userName">שם</label>
+                    <input type="text" id="userName" name="userName" required placeholder="שם">
                     <p id="msgName"></p>
                 </div>
     
@@ -333,7 +329,7 @@
                 </div>
     
                 <div class="form-buttons">
-                    <button id="submit" type="submit">שליחה</button>
+                    <button id="btnSubmit" type="submit">שליחה</button>
                 </div>
             </form>
         </div>

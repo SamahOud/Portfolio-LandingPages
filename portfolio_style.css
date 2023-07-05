@@ -12,16 +12,16 @@ img { object-fit: cover; }
 
 /* ***** Header Nav Bar ***** */
 header{
-    display: flex;
+    /* display: flex; */
     position: sticky;
     top: 0;
     z-index: 1;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     padding: 10px 5%;
     background: aliceblue;
     box-shadow: 10px 10px 10px grey;
-    max-height: 500px;
+    /* min-height: 85px; */
 }
 
 li, a {
@@ -52,7 +52,7 @@ textarea { min-height: 100px; }
 
 #message { font-family: 'Assistant', sans-serif; }
 
-#submit {
+#btnSubmit {
     padding: 10px 25px;
     border: none;
     background-color: #1AE0EC;
@@ -74,7 +74,12 @@ textarea { min-height: 100px; }
 }
 
 /* ***** Header Nav Bar ***** */
-.titles{ display: flex; }
+.titles{ 
+    display: flex; 
+    position: absolute;
+    left: 180px;
+    top: 20px;
+}
 
 .logo {
     cursor: pointer;
@@ -91,30 +96,40 @@ textarea { min-height: 100px; }
     align-items: end;
 }
 
-.nav_menu  {
+.navbar {
+    min-height: 85px;
+    color: black;
     display: flex;
-    list-style-type: none;
+    justify-content: end;
     align-items: center;
-    flex-direction: row-reverse;
-    gap: 15px;
 }
 
-.nav_menu  li { padding: 15px 10px; }
+.navbar a {
+    color: black;
+    font-size: 17px;
+    padding: .7rem;
+    text-decoration: none;
+}
 
-.nav_menu li a {
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse
+}
+
+.navbar .menu {
+    display: none;
+}
+
+.navbar li a {
     font-size: 20px;
     transition: all .2s;
 }
 
-.nav_menu li a:hover,
-.nav_menu li a.active { color: #13b2ba; }
-
-.menu { display: none; }
-
-.menu_line {
-    width: 20px;
-    cursor: pointer;
-}
+.navbar li a:hover,
+.navbar li a.active { color: #13b2ba; }
 
 /* ***** Main Section About The Works ***** */
 .section_control {
@@ -383,19 +398,25 @@ hr {
 /* ======== Media's ======== */
 /* X-Small device (portrait phones, less than 576px) */
 @media screen and (min-width: 330px) and  (max-width: 576px) {
-    .nav_menu {
-        width: 100%;
-        text-align: center;
-        display: none;
-    }
-
-    .menu {
-        display: block;
-        position: absolute;
-        right: 15px;
-        top: 25px;
+    .navbar { 
+        display: block; 
+        min-height: 50px;
     }
     
+    .navbar a.menu { display: block;}
+
+    .navbar a { display: none;}
+
+    .navbar.responsive a { display: block;}
+
+    .navbar ul { 
+        flex-direction: column;
+        align-items: end;
+        margin: 20px 10px 0;
+    }
+    
+    .titles{ left: 8px;}
+
     .section_control { padding: 100px 8px; }
 
     h1 {
@@ -453,18 +474,24 @@ hr {
 
 /* Small device (landscap phone, 576px and up) 576px to 768px */
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .nav_menu {
-        width: 100%;
-        text-align: center;
-        display: none;
+    .navbar { 
+        display: block; 
+        min-height: 50px;
+    }
+    
+    .navbar a.menu { display: block;}
+
+    .navbar a { display: none;}
+
+    .navbar.responsive a { display: block;}
+
+    .navbar ul { 
+        flex-direction: column;
+        align-items: end;
+        margin: 20px 10px 0;
     }
 
-    .menu {
-        display: block;
-        position: absolute;
-        right: 15px;
-        top: 25px;
-    }
+    .titles{ left: 50px;}
 
     .section_control { padding: 100px 0;}
 
@@ -522,6 +549,8 @@ hr {
 
 /* Medium device (tablets, 768px and up) 768px to 992px */
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    .titles { left: 80px;}
+
     .text_ofwork { padding: 0 16%; }
     
     .article_imgs {

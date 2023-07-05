@@ -1,8 +1,12 @@
-/**
-    msgName
-    msgEmail
-    msgPhone
-*/
+let nav = document.querySelector(".navbar");
+ 
+function toggle() {
+    if (nav.className === 'navbar') {
+        nav.className += ' responsive';
+    } else {
+        nav.className = 'navbar';
+    }
+}
 
 const myForm = document.getElementById('my-form');
 let msgName = document.getElementById('msgName');
@@ -10,37 +14,55 @@ let msgEmail = document.getElementById('msgEmail');
 let msgPhone = document.getElementById('msgPhone');
 
 
-const fullNameRegex = /^[a-zA-Z]{3,25}$/;
+const nameRegex = /^[a-zA-Z]{3,25}$/;
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const phoneRegex = /^[0-9]{10}$/;
 
 myForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const fullNameInput = myForm.elments['fullname'];
-    const emailInput = myForm.elments['email'];
-    const phoneInput = myForm.elments['phone'];
+    const nameInput = myForm.elements['userName'];
+    const emailInput = myForm.elements['email'];
+    const phoneInput = myForm.elements['phone'];
+    const submitBtn = myForm.elements['btnSubmit'];
 
-    if (!fullNameRegex.test(fullNameInput.value)) {
-        msgName.innerText += 'עליך להקליד שם בעל 3 אותיות לפחות';
-        fullNameInput.style.borderBottomColor = "red";
-        return;
+    let isValid = true;
+
+    if (!nameRegex.test(nameInput.value)) {
+        msgName.innerText += 'עליך להקליד שם בעל 3 אותיות לפחות בלי רווחים';
+        nameInput.style.borderBottomColor = "red";
+        isValid = false;
+    } else {
+        nameInput.style.borderBottomColor = "green";
+        msgName.innerText = '';
     }
 
-    else if (!emailRegex.test(emailInput.value)) {
+    if (!emailRegex.test(emailInput.value)) {
         msgEmail.innerText += 'עליך להקליד כתובת אימייל תקינה';
-        fullemailInputNameInput.style.borderBottomColor = "red";
-        return;
-    }
+        emailInput.style.borderBottomColor = "red";
+        isValid = false;
+    } else {
+        emailInput.style.borderBottomColor = "green";
+        msgEmail.innerText = '';
+    } 
 
-    else if (!phoneRegex.test(phoneInput.value)) {
+    if (!phoneRegex.test(phoneInput.value)) {
         msgPhone.innerText += 'עליך להקליד מספר טלפון תקין';
         phoneInput.style.borderBottomColor = "red";
-        return;
+        isValid = false;
+    } else {
+        phoneInput.style.borderBottomColor = "green";
+        msgPhone.innerText = '';
     }
 
-    else {
-        message.innerText = '';
+    submitBtn.disabled = !isValid;
+    if (isValid) {
+        // Continue with form submission or further processing
+        alert("Has been sent successfully");
+        myForm.submit();
+    } else {
+        // Handle the case when the button is disabled
+        alert("Please fill in all the required fields correctly.");
+        submitBtn.disabled = isValid;
     }
-    myForm.submit();
 });
