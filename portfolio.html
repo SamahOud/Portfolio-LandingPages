@@ -308,20 +308,23 @@
             <h2 class="text-contact">צור קשר</h2>
             <p class="text-fill-p">נא לרשום את הפרטים שלכם ואנו נחזור אליכם בהקדם :</p>
             
-            <form action="mailto:samahoud92@gmail.com" method="post">
+            <form id="my-form" action="mailto:samahoud92@gmail.com" method="post">
                 <div class="form-control">
                     <label for="fullname">שם</label>
                     <input type="text" id="fullname" name="fullname" required placeholder="שם">
+                    <p id="msgName"></p>
                 </div>
     
                 <div class="form-control">
                     <label for="email">אימייל</label>
                     <input type="email" id="email" name="email" required placeholder="אימייל">
+                    <p id="msgEmail"></p>
                 </div>
     
                 <div class="form-control">
                     <label for="phone">טלפון</label>
                     <input type="tel" id="phone" name="phone" required placeholder="טלפון">
+                    <p id="msgPhone"></p>
                 </div>
     
                 <div class="form-control">
@@ -386,5 +389,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!-- My script -->
+    <script src="./portfolio_script.js"></script>
 </body>
 </html>
