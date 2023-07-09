@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* ***** Header Nav Bar ***** */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px 5%;
+    background: aliceblue;
+    box-shadow: 10px 10px 10px grey;
+}
+
+li, a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ***** Header Nav Bar ***** */
+.titles{ 
+    display: flex; 
+    position: absolute;
+    left: 180px;
+    top: 20px;
+}
+
+.logo {
+    cursor: pointer;
+    max-width: 50px;
+    border-radius: 50px;
+}
+
+.my-name {
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-flex;
+    gap: 5px;
+    align-items: end;
+}
+
+.navbar {
+    min-height: 85px;
+    color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbar a {
+    color: black;
+    font-size: 17px;
+    padding: .7rem;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse
+}
+
+.navbar .menu {
+    display: none;
+}
+
+.navbar li a {
+    font-size: 20px;
+    transition: all .2s;
+}
+
+.navbar li a:hover,
+.navbar li a.active { color: #13b2ba; }
+
+/* ***** Main Section Technologies Image ***** */
+.section_images{
+    padding: 10px 10%;
+    background: white;
+    box-shadow: 1px 1px lightgrey;
+}
+
+.article_imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* About section design */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 5rem;
+    min-height: 70vh;
+    padding: 10rem 12% 7rem;
+    background: #f3f3f3;
+}
+
+.about_img {
+    max-width: 100%;
+    height: 100%;
+}
+.about_img img {
+    width: 28vw;
+    height: 55vh;
+    object-fit: fill;
+    border-radius: 55px;
+    transition: .5s ease;
+}
+
+.about_img:hover img {
+    transform: scale(1.1);
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about_content {
+    direction: rtl;
+}
+.about_content h2 {
+    text-align: right;
+    line-height: 1.2;
+    font-size: 2.6rem;
+}
+
+.about_content p {
+    font-size: 1.3rem;
+    margin: 2rem 0 3rem;
+    line-height: 1.7;
+    color: #2F2E2E;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #0ef;
+    border-radius: 4rem;
+    border: none;
+    margin-left: 23px;
+    box-shadow: 0 0 1rem #0ef;
+    font-size: 1.6rem;
+    color: #323946;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* ***** Footer Copyright ***** */
+.footer-div-span {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    color: #f3f3f3;
+    background: #2F2E2E;
+    font-size: 14px;
+}
+
+/* ======== Media's ======== */
+/* X-Small device (portrait phones, less than 576px) */
+@media screen and (min-width: 330px) and  (max-width: 576px) {
+    .navbar { 
+        display: block; 
+        min-height: 50px;
+    }
+    
+    .navbar a.menu { display: block;}
+
+    .navbar a { display: none;}
+
+    .navbar.responsive a { display: block;}
+
+    .navbar ul { 
+        flex-direction: column;
+        align-items: end;
+        margin: 20px 10px 0;
+    }
+    
+    .titles{ left: 8px;}
+
+    
+}
+
+/* Small device (landscap phone, 576px and up) 576px to 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .navbar { 
+        display: block; 
+        min-height: 50px;
+    }
+    
+    .navbar a.menu { display: block;}
+
+    .navbar a { display: none;}
+
+    .navbar.responsive a { display: block;}
+
+    .navbar ul { 
+        flex-direction: column;
+        align-items: end;
+        margin: 20px 10px 0;
+    }
+
+    .titles{ left: 50px;}
+
+}
+
+/* Medium device (tablets, 768px and up) 768px to 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .titles { left: 80px;}
+}
+

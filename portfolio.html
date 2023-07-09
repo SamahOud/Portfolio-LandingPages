@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,25 @@
     <!-- Google's Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&family=Satisfy&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&family=Satisfy&display=swap"
+        rel="stylesheet">
+
     <!-- Font-Awesome - ICON'S -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="./portfolio_style.css">
     <title>Web Page Portfolio</title>
 </head>
+
 <body>
     <!-- ============= Header ============= -->
     <header>
@@ -30,6 +40,7 @@
                 <li><a href="#home" class="active">ראשי</a></li>
                 <li><a href="#about">אודות</a></li>
                 <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#workJS">עבודות</a></li>
                 <li><a href="#contact">צור קשר</a></li>
             </ul>
         </nav>
@@ -47,9 +58,9 @@
         <!-- ***** Main Section About The Works ***** -->
         <section class="section_control" id="home">
             <h1>תיק עבודות אישי</h1>
-            <article >
+            <article>
                 <div class="text_ofwork">
-                    <p class="text_p"> 
+                    <p class="text_p">
                         ברוכים הבאים לתיק העבודות האישי שלי, פה תוכלו למצוא את כל עבודותיי האחרונות.
                         בנוסף תוכלו לקרוא קצת עליי ועל תחומי העיסוק שלי בכל הקשור לבניית אתרים.
                     </p>
@@ -75,35 +86,35 @@
         <!-- ***** Main Section Top About Me ***** -->
         <section class="section_aboutme" id="about">
             <img class="img_profile" src="./assets/icons/business-women.png" alt="profile">
-            
+
             <article class="cls_article">
                 <h2>קצת עליי</h2>
                 <div class="div_newLine">
                     <p>
                         קוראים לי אבו שיכה סמאח נולדתי ב' 1992 מכפר עארה.
-                        סיימתי את לימודי כהנדסאית תוכנה 
+                        סיימתי את לימודי כהנדסאית תוכנה
                         Software Engineering. בהצלחה במכללת אלקאסמי בבאקה בשנת 2019 עד 2022 .
                     </p>
                 </div>
-                
+
                 <div class="div_newLine">
-                    <p> 
+                    <p>
                         הרגשתי תמיד שעולם התכנות מושך אותי ותמיד אהבתי לכתוב קוד לכן נרשמתי לקורס
                         Full-Stack Development, אהבתי את עיצוב האתרים ותמיד העדפתי
                         לשבת שעות באופן יומיומי מול המחשב כדי לייצר משהו יפה.
                     </p>
                 </div>
-                
+
                 <div class="div_newLine">
                     <p>
-                        חשוב לי לציין שפיתחתי אפליקציה שקראתי לה "אג'נדה" 
+                        חשוב לי לציין שפיתחתי אפליקציה שקראתי לה "אג'נדה"
                         שבאמצעותה אוכל לסדר את סדר הפעילויות היומיומיות.
                     </p>
                 </div>
-                
+
                 <div class="div_newLine">
                     <p>
-                        מקווה שהקורס הזה יוביל אותי קדימה.                    
+                        מקווה שהקורס הזה יוביל אותי קדימה.
                     </p>
                 </div>
             </article>
@@ -119,23 +130,25 @@
                     <h3 class="text-cv">להורדת קורות חיים</h3>
                     <p>הורדת קורות חיים מעודכנים בלחיצת כפתור פשוטה.</p>
                     <p>כל שעליכם לעשות הוא ללחוץ על הכפתור מטה.</p>
-                    <a href="./assets/cv/Samah-Abu-Sheacha.pdf" download class="btn"><i class="fa-solid fa-cloud-arrow-down"></i>להורדת מסמך PDF</a>
-                </div>               
+                    <a href="./assets/cv/Samah-Abu-Sheacha.pdf" download class="btn"><i
+                            class="fa-solid fa-cloud-arrow-down"></i>להורדת מסמך PDF</a>
+                </div>
             </article>
         </section>
         <!-- ***** Main Section Middle Cards ***** -->
         <section class="section-div-cards" id="gallery">
             <h2 class="h2_works">עבודות נבחרות</h2>
-            
+
             <article class="article_cards">
-                 <div class="card">
-                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage1.png" alt="landing image 1">
-                    
+                <div class="card">
+                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage1.png"
+                        alt="landing image 1">
+
                     <div class="card_content">
                         <h3 class="card_title">Landing Page 1</h3>
                         <p class="card_text">
-                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס 
-                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד 
+                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס
+                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד
                             על תוסף אלמנטור הכל החומר שנלמד עד כה.
                         </p>
 
@@ -144,53 +157,55 @@
                             <img src="./assets/portfolio's_images/technologies/css.png" alt="css photo">
                             <img src="./assets/portfolio's_images/technologies/bootstrap.png" alt="bootstrap photo">
                         </div>
-    
+
                         <div class="card_btn_div">
-                            <a href="https://github.com/SamahOud/LandingPage-1/archive/refs/heads/main.zip">
-                                <button class="btn-cards"><ion-icon name="chevron-back-sharp"></ion-icon>להורדת הפרוייקט</button>
-                            </a>
-                            <a href="https://samahoud.github.io/Portfolio-LandingPages/LandingPages/landing-page-1/landing1.html">
-                                <button class="btn-cards btn-2"><ion-icon name="chevron-back-sharp"></ion-icon>לצפייה בפרוייקט</button>
+                            <a href="./LinksLandingPages/PageDetails-Landing-1/index.html">
+                                <button class="btn-cards">
+                                    <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    לעמוד הפרוייקט
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage2.png" alt="landing image 2">
-                    
+                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage2.png"
+                        alt="landing image 2">
+
                     <div class="card_content">
                         <h3 class="card_title">Landing Page 2</h3>
                         <p class="card_text">
-                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס 
-                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד 
-                            על תוסף אלמנטור הכל החומר שנלמד עד כה.                        
+                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס
+                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד
+                            על תוסף אלמנטור הכל החומר שנלמד עד כה.
                         </p>
 
                         <div class="img_work">
                             <img src="./assets/portfolio's_images/technologies/html.png" alt="html photo">
                             <img src="./assets/portfolio's_images/technologies/css.png" alt="css photo">
                         </div>
-                        
+
                         <div class="card_btn_div">
-                            <a href="https://github.com/SamahOud/LandingPage-2/archive/refs/heads/main.zip">
-                                <button class="btn-cards"><ion-icon name="chevron-back-sharp"></ion-icon>להורדת הפרוייקט</button>
-                            </a>
-                            <a href="https://samahoud.github.io/Portfolio-LandingPages/LandingPages/landing-page-2/landing2.html">
-                                <button class="btn-cards btn-2"><ion-icon name="chevron-back-sharp"></ion-icon>לצפייה בפרוייקט</button>
+                            <a href="./LinksLandingPages/PageDetails-Landing-2/index.html">
+                                <button class="btn-cards">
+                                    <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    לעמוד הפרוייקט
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage3.png" alt="landing image 3">
-                    
+                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage3.png"
+                        alt="landing image 3">
+
                     <div class="card_content">
                         <h3 class="card_title">Landing Page 3</h3>
                         <p class="card_text">
-                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס 
-                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד 
+                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס
+                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד
                             על תוסף אלמנטור הכל החומר שנלמד עד כה
                         </p>
 
@@ -199,26 +214,27 @@
                             <img src="./assets/portfolio's_images/technologies/css.png" alt="css photo">
                             <img src="./assets/portfolio's_images/technologies/bootstrap.png" alt="bootstrap photo">
                         </div>
-                        
+
                         <div class="card_btn_div">
-                            <a href="https://github.com/SamahOud/LandingPage-3/archive/refs/heads/main.zip">
-                                <button class="btn-cards"><ion-icon name="chevron-back-sharp"></ion-icon>להורדת הפרוייקט</button>
-                            </a>
-                            <a href="https://samahoud.github.io/Portfolio-LandingPages/LandingPages/landing-page-3-bg-mix/landing3.html">
-                                <button class="btn-cards btn-2"><ion-icon name="chevron-back-sharp"></ion-icon>לצפייה בפרוייקט</button>
+                            <a href="./LinksLandingPages/PageDetails-Landing-3/index.html">
+                                <button class="btn-cards">
+                                    <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    לעמוד הפרוייקט
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landing_Page4-2.png" alt="landing image 4">
-                    
+                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landing_Page4-2.png"
+                        alt="landing image 4">
+
                     <div class="card_content">
                         <h3 class="card_title">Landing Page 4</h3>
                         <p class="card_text">
-                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס 
-                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד 
+                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס
+                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד
                             על תוסף אלמנטור הכל החומר שנלמד עד כה
                         </p>
 
@@ -227,26 +243,27 @@
                             <img src="./assets/portfolio's_images/technologies/css.png" alt="css photo">
                             <img src="./assets/portfolio's_images/technologies/bootstrap.png" alt="bootstrap photo">
                         </div>
-                        
+
                         <div class="card_btn_div">
-                            <a href="https://github.com/SamahOud/LandingPage-4/archive/refs/heads/main.zip">
-                                <button class="btn-cards"><ion-icon name="chevron-back-sharp"></ion-icon>להורדת הפרוייקט</button>
-                            </a>
-                            <a href="https://samahoud.github.io/Portfolio-LandingPages/LandingPages/landing-page-4/landing4.html">
-                                <button class="btn-cards btn-2"><ion-icon name="chevron-back-sharp"></ion-icon>לצפייה בפרוייקט</button>
+                            <a href="./LinksLandingPages/PageDetails-Landing-4/index.html">
+                                <button class="btn-cards">
+                                    <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    לעמוד הפרוייקט
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage5.png" alt="landing image 5">
-                    
+                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage5.png"
+                        alt="landing image 5">
+
                     <div class="card_content">
                         <h3 class="card_title">Landing Page 5</h3>
                         <p class="card_text">
-                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס 
-                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד 
+                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס
+                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד
                             על תוסף אלמנטור הכל החומר שנלמד עד כה
                         </p>
 
@@ -255,26 +272,27 @@
                             <img src="./assets/portfolio's_images/technologies/css.png" alt="css photo">
                             <img src="./assets/portfolio's_images/technologies/scss.png" alt="scss photo">
                         </div>
-                        
+
                         <div class="card_btn_div">
-                            <a href="https://github.com/SamahOud/LandingPage-5/archive/refs/heads/main.zip">
-                                <button class="btn-cards"><ion-icon name="chevron-back-sharp"></ion-icon>להורדת הפרוייקט</button>
-                            </a>
-                            <a href="https://samahoud.github.io/Portfolio-LandingPages/LandingPages/landing-page-5/landing5.html">
-                                <button class="btn-cards btn-2"><ion-icon name="chevron-back-sharp"></ion-icon>לצפייה בפרוייקט</button>
+                            <a href="./LinksLandingPages/PageDetails-Landing-5/index.html">
+                                <button class="btn-cards">
+                                    <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    לעמוד הפרוייקט
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage6.png" alt="landing image 6">
-                    
+                    <img class="card_image" src="./assets/portfolio's_images/landing_pages/landingPage6.png"
+                        alt="landing image 6">
+
                     <div class="card_content">
                         <h3 class="card_title">Landing Page 6</h3>
                         <p class="card_text">
-                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס 
-                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד 
+                            בניית אתר תדמית אישי עבור הסטודנט, האתר יהווה כרטיס
+                            ביקור עם יציאתו לשוק העבודה.. באמצעות פרוייקט זה נלמד
                             על תוסף אלמנטור הכל החומר שנלמד עד כה
                         </p>
 
@@ -283,18 +301,107 @@
                             <img src="./assets/portfolio's_images/technologies/css.png" alt="css photo">
                             <img src="./assets/portfolio's_images/technologies/bootstrap.png" alt="bootstrap photo">
                         </div>
-                        
+
                         <div class="card_btn_div">
-                            <a href="https://github.com/SamahOud/LandingPage-6/archive/refs/heads/main.zip">
-                                <button class="btn-cards"><ion-icon name="chevron-back-sharp"></ion-icon>להורדת הפרוייקט</button>
-                            </a>
-                            <a href="https://samahoud.github.io/Portfolio-LandingPages/LandingPages/landing-page-6/landing6.html">
-                                <button class="btn-cards btn-2"><ion-icon name="chevron-back-sharp"></ion-icon>לצפייה בפרוייקט</button>
+                            <a href="./LinksLandingPages/PageDetails-Landing-6/index.html">
+                                <button class="btn-cards">
+                                    <ion-icon name="chevron-back-sharp"></ion-icon>
+                                    לעמוד הפרוייקט
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
             </article>
+        </section>
+
+        <!-- Portfolio JavaScript section design -->
+        <section class="portfolio" id="workJS">
+            <h2 class="heading">JS - עבודות נבחרות</h2>
+            <p class="descJS">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed eget ex vel velit tincidunt bibendum eu
+            </p>
+
+            <div class="portfolio_container">
+                <div class="portfolio_txt">
+                    <div class="portfolio_box">
+                        <img src="./assets/imagesJS/creditCard2.png" alt="Credit Card">
+                        <div class="portfolio_layer">
+                            <h4>Credit Card</h4>
+                            <a href="./LinksProjectJS/PageDetails-CreditCard/index.html">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Credit Card</p>
+                </div>
+
+                <div class="portfolio_txt">
+                    <div class="portfolio_box">
+                        <img src="./assets/bg.jpeg" alt="">
+                        <div class="portfolio_layer">
+                            <h4>Credit Card</h4>
+                            <a href="#">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Credit Card</p>
+                </div>
+
+                <div class="portfolio_txt">
+                    <div class="portfolio_box">
+                        <img src="./assets/bg.jpeg" alt="">
+                        <div class="portfolio_layer">
+                            <h4>Credit Card</h4>
+                            <a href="#">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Credit Card</p>
+                </div>
+
+                <div class="portfolio_txt">
+                    <div class="portfolio_box">
+                        <img src="./assets/bg.jpeg" alt="">
+                        <div class="portfolio_layer">
+                            <h4>WCredit Card</h4>
+                            <a href="#">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Credit Card</p>
+                </div>
+
+                <div class="portfolio_txt">
+                    <div class="portfolio_box">
+                        <img src="./assets/bg.jpeg" alt="">
+                        <div class="portfolio_layer">
+                            <h4>Credit Card</h4>
+                            <a href="#">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Credit Card</p>
+                </div>
+
+                <div class="portfolio_txt">
+                    <div class="portfolio_box">
+                        <img src="./assets/bg.jpeg" alt="">
+                        <div class="portfolio_layer">
+                            <h4>Credit Card</h4>
+                            <a href="#">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Credit Card</p>
+                </div>
+            </div>
         </section>
     </main>
     <!-- ============= Footer ============= -->
@@ -303,37 +410,37 @@
         <div class="div-form">
             <h2 class="text-contact">צור קשר</h2>
             <p class="text-fill-p">נא לרשום את הפרטים שלכם ואנו נחזור אליכם בהקדם :</p>
-            
+
             <form id="my-form" action="mailto:samahoud92@gmail.com" method="post">
                 <div class="form-control">
                     <label for="userName">שם</label>
                     <input type="text" id="userName" name="userName" required placeholder="שם">
                     <p id="msgName"></p>
                 </div>
-    
+
                 <div class="form-control">
                     <label for="email">אימייל</label>
                     <input type="email" id="email" name="email" required placeholder="אימייל">
                     <p id="msgEmail"></p>
                 </div>
-    
+
                 <div class="form-control">
                     <label for="phone">טלפון</label>
                     <input type="tel" id="phone" name="phone" required placeholder="טלפון">
                     <p id="msgPhone"></p>
                 </div>
-    
+
                 <div class="form-control">
                     <label for="message">הודעה</label>
                     <textarea id="message" name="message" required placeholder="הודעה"></textarea>
                 </div>
-    
+
                 <div class="form-buttons">
                     <button id="btnSubmit" type="submit">שליחה</button>
                 </div>
             </form>
         </div>
-        
+
         <!-- ***** Footer Contact Icons ***** -->
         <div class="footer-div-icons">
             <div class="box">
@@ -361,7 +468,8 @@
             </div>
 
             <div class="box">
-                <a href="#"><img class="footer-icons-img" id="img-icon-email" src="./assets/icons/Email.png" alt="email photo">
+                <a href="#"><img class="footer-icons-img" id="img-icon-email" src="./assets/icons/Email.png"
+                        alt="email photo">
                     <span class="footer-span">samahoud92@gmail.com</span>
                 </a>
             </div>
@@ -388,4 +496,5 @@
     <!-- My script -->
     <script src="./portfolio_script.js"></script>
 </body>
+
 </html>
