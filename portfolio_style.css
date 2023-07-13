@@ -36,7 +36,7 @@ label, input { display: block; }
 
 input, textarea {
     border: none;
-    border-bottom: 5px solid #8c8a8a;
+    border-bottom: 5px solid #1AE0EC;
     background-color: white;
     width: 400px;
     height: 50px;
@@ -46,7 +46,10 @@ input, textarea {
 
 textarea { min-height: 100px; }
 
-#message { font-family: 'Assistant', sans-serif; }
+#message { 
+    font-family: 'Assistant', sans-serif;
+    padding: 11px 10px; 
+}
 
 #btnSubmit {
     padding: 10px 25px;
