@@ -87,8 +87,7 @@ h1 {
     transition: all .2s;
 }
 
-.navbar li a:hover,
-.navbar li a.active { color: #13b2ba; }
+.navbar li a:hover { color: #13b2ba; }
 
 /* ***** Main Section About The Works ***** */
 .section_control {
@@ -107,9 +106,9 @@ h1 {
     padding: 65px;
 }
 
-.text_ofwork { padding: 0 15%; }
+.text-description { padding: 0 15%; }
 
-.text_p { 
+.description { 
     direction: rtl; 
     margin-top: 10px;
     font-weight: 500;

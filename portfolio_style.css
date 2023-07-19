@@ -128,7 +128,7 @@ textarea { min-height: 100px; }
 }
 
 .navbar ul li a:hover { color: #13b2ba; }
-.navbar ul li a.active { color: #13b2ba!important; }
+.navbar ul li a.active { color: #13b2ba; }
 
 
 
@@ -149,9 +149,9 @@ textarea { min-height: 100px; }
     padding: 100px;
 }
 
-.text_ofwork { padding: 0 30%; }
+.text-description { padding: 0 30%; }
 
-.text_p { 
+.description { 
     direction: rtl; 
     margin-top: 10px;
     opacity: .8;

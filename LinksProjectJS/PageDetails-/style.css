@@ -78,8 +78,7 @@ li, a {
     transition: all .2s;
 }
 
-.navbar li a:hover,
-.navbar li a.active { color: #13b2ba; }
+.navbar li a:hover { color: #13b2ba; }
 
 /* ***** Main Section Technologies Image ***** */
 .section_images{
