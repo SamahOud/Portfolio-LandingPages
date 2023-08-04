@@ -40,7 +40,6 @@ input, textarea {
     background-color: white;
     width: 400px;
     height: 50px;
-    margin-bottom: 25px;
     padding: 5px 10px;
 }
 
@@ -96,7 +95,7 @@ textarea { min-height: 100px; }
 }
 
 .navbar {
-    min-height: 85px;
+    min-height: 70px;
     color: black;
     display: flex;
     justify-content: end;
@@ -129,8 +128,6 @@ textarea { min-height: 100px; }
 
 .navbar ul li a:hover { color: #13b2ba; }
 .navbar ul li a.active { color: #13b2ba; }
-
-
 
 /* ***** Main Section About The Works ***** */
 .section_control {
@@ -464,11 +461,28 @@ textarea { min-height: 100px; }
 
 .form-control { padding: 0 0 0 10%; }
 
-#msgName, #msgEmail, #msgPhone { 
-    color: red;
-    /* margin-bottom: 15px;
-    margin-top: -20px; */
+.form-control input:focus {
+    outline: 0;
 }
+
+.form-control.success input {
+    border-color: #09c372;
+}
+
+.form-control.error input {
+    border-color: #ff3860;
+}
+
+.form-control .error {
+    color: #ff3860;
+    font-size: 16px;
+    height: 20px;
+    margin-bottom: 17px;
+}
+
+/* #msgName, #msgEmail, #msgPhone { 
+    color: red;
+} */
 
 /* ***** Footer Contact Icons ***** */
 .footer-div-icons {

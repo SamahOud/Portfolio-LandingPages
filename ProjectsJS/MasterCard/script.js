@@ -209,10 +209,12 @@ myForm.addEventListener('submit', (event) => {
     payButton.disabled = !isValid;
     if (isValid) {
         // Continue with form submission or further processing
+        payButton.style.opacity = "1";
         myForm.submit();
     } else {
         // Handle the case when the button is disabled
         alert("Please fill in all the required fields correctly.");
         payButton.disabled = isValid;
+        payButton.style.opacity = "0.5";
     }
 });

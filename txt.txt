@@ -1,0 +1,74 @@
+const myForm = document.getElementById('my-form');
+const username = document.getElementById('userName');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+
+myForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const submitBtn = myForm.elements['btnSubmit'];
+    let isValid = true;
+
+    validateInputs();
+    submitBtn.disabled = !isValid;
+    if (isValid) {
+        // Continue with form submission or further processing
+        alert("Has been sent successfully");
+        myForm.submit();
+    } else {
+        // Handle the case when the button is disabled
+        alert("Please fill in all the required fields correctly.");
+        submitBtn.disabled = isValid;
+    }
+});
+
+function setError(element, message) {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+function setSuccess(element) {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
+
+function isValidEmail(email) {
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return regex.test(String(email).toLowerCase());
+}
+
+function validateInputs() {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const phoneValue = phone.value.trim();
+
+    if(usernameValue === '') {
+        setError(username, 'נדרש שם משתמש');
+    } else {
+        setSuccess(username);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'יש צורך באימייל');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'ספק כתובת אימייל חוקית');
+    } else {
+        setSuccess(email);
+    }
+
+    if(phoneValue === '') {
+        setError(phone, 'נדרש טלפון');
+    } else if (phoneValue.length < 10 ) {
+        setError(phone, 'מספר הטלפון חייב להיות לפחות 10 מספרים.')
+    } else {
+        setSuccess(phone);
+    }
+}

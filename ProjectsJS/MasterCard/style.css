@@ -40,7 +40,10 @@
     width: 160px;
 }
 
-::placeholder { color: #A175FF;}
+::placeholder { 
+    color: #A175FF;
+    opacity: .5;
+}
 
 .form_input {
     position: relative;
@@ -52,7 +55,7 @@ label {
 }
 
 input {
-    color: #A175FF;
+    color: #9563FF;
     background: #EEEEEE;
     width: 400px;
     border: 2px solid #eee;
@@ -97,11 +100,7 @@ button {
     width: 130px;
     padding: 15px;
     margin: 20px 0;
-}
-
-button:disabled {
     opacity: .5;
-    cursor: not-allowed!important;
 }
 
 /* ============= */

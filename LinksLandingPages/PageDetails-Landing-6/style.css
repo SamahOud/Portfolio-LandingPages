@@ -56,7 +56,7 @@ h1 {
 }
 
 .navbar {
-    min-height: 85px;
+    min-height: 70px;
     color: black;
     display: flex;
     justify-content: end;
