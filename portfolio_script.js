@@ -110,9 +110,7 @@ function validateInputs() {
         setError(username, 'נדרש שם משתמש');
         isValid = false; // Update isValid
     } 
-    else {
-        setSuccess(username);
-    }
+    else { setSuccess(username); }
 
     if(emailValue === '') {
         setError(email, 'יש צורך באימייל');
@@ -122,9 +120,7 @@ function validateInputs() {
         setError(email, 'ספק כתובת אימייל חוקית');
         isValid = false; // Update isValid
     } 
-    else {
-        setSuccess(email);
-    }
+    else { setSuccess(email); }
 
     if(phoneValue === '') {
         setError(phone, 'נדרש טלפון');
@@ -134,9 +130,8 @@ function validateInputs() {
         setError(phone, 'מספר הטלפון חייב להיות לפחות 10 מספרים.')
         isValid = false; // Update isValid
     } 
-    else {
-        setSuccess(phone);
-    }
+    else { setSuccess(phone); }
+
     return isValid; // Return the isValid value
 }
 

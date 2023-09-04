@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a description of the current page">
+    <meta name="keywords" content="This is a Memory Card Game">
+
+    <!-- Material Icon Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+     <!-- Link For Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="./memoryCard.css">
+    <title>Memory Card Game</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <ul class="cards">
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-1.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-2.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-3.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-4.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-5.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-6.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-7.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-8.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-1.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-2.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-3.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-4.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-5.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-6.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-7.png" alt="card-img">
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="view front-view">
+                    <span class="materia-icons">?</span>
+                </div>
+
+                <div class="view back-view">
+                    <img src="./Images/img-8.png" alt="card-img">
+                </div>
+            </li>
+        </ul>
+
+        <div class="results">
+            <span id="score" class="score">Score: 0</span> |
+            <span id="steps" class="steps">Steps: 0</span> |
+            <button id="refreshButton">Refresh</button>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" id="closePopup">&times;</span>
+            <p id="popupMessage"></p>
+        </div>
+    </div>  
+    
+    <script src="./memoryCard.js"></script>
+</body>
+</html>

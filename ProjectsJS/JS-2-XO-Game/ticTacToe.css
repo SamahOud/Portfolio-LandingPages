@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #2196F3;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+}
+
+section .imgBox {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+section .imgBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+section .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(20px 20px 16px red) invert(100%);
+    object-fit: cover;
+}
+
+section .contentBox {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    background: rgba(210, 246, 255, 0.62);
+    z-index: 1;
+}
+
+section .contentBox .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.game--title {
+    padding-top: 20px;
+    font-size: 35px;
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 10px;
+}
+
+.cell {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    color: #872828;
+    box-shadow: 0 0 0 1px #333333;
+    border: 2px solid #245b62;
+    background: rgba(255, 255, 255, 0.54);
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 45px;
+}
+
+button {
+    margin: 20px auto;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #156974;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.25s;
+    background-color: #245b62;
+}
+
+@media screen and (max-width: 576px) {
+    section {
+        height: 460px;
+        margin: 50px auto;
+    }
+
+    section .contentBox {
+        position: relative;
+        right: 0;
+        height: 75%;
+        width: 80%;
+    }
+
+    .game--title {
+        font-size: 25px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    section .contentBox {
+        position: relative;
+        right: 0;
+        height: 75%;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section .contentBox {
+        position: relative;
+        right: 0;
+        height: 85%;
+        width: 80%;
+    }
+}

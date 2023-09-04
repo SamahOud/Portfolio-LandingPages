@@ -126,7 +126,7 @@ textarea { min-height: 100px; }
     transition: all .2s;
 }
 
-.navbar ul li a:hover { color: #13b2ba; }
+.navbar ul li a:hover,
 .navbar ul li a.active { color: #13b2ba; }
 
 /* ***** Main Section About The Works ***** */
@@ -240,12 +240,13 @@ textarea { min-height: 100px; }
     background-color: #f3f3f3;
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 2%;
 }
 
 .h2_works {
-    text-align: center;
-    margin: 0 0 30px 0;;
+    padding-bottom: 15px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    font-size: 35px;
 }
 
 .article_cards {
@@ -341,16 +342,19 @@ textarea { min-height: 100px; }
 .portfolio {
     background: aliceblue;
     min-height: 55vh;
-    padding: 100px ; 
+    padding: 2% ; 
     text-align: center;
 }
 
 .portfolio .heading {
     margin-bottom: .5rem;
+    padding-bottom: 15px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    font-size: 35px;
 }
 
 .portfolio .descJS {
-    margin: 0 20rem 6rem 20rem;
+    margin: 0 23rem 6rem 23rem;
 }
 
 .portfolio_container {
@@ -480,10 +484,6 @@ textarea { min-height: 100px; }
     margin-bottom: 17px;
 }
 
-/* #msgName, #msgEmail, #msgPhone { 
-    color: red;
-} */
-
 /* ***** Footer Contact Icons ***** */
 .footer-div-icons {
     display: flex;
@@ -573,6 +573,15 @@ hr {
         align-items: center;
         flex-direction: column;
         padding: 25px 5%;
+    }
+
+    .portfolio .heading {
+        text-align: center;
+        margin: 3rem 2rem 0 2rem;
+    }
+
+    .portfolio .descJS {
+        margin: 2rem 2rem 6rem 2rem;
     }
 
     .portfolio_container {
@@ -674,8 +683,17 @@ hr {
         justify-content: center;
     }
 
+    .portfolio .heading {
+        text-align: center;
+        margin: 3rem 2rem 0 2rem;
+    }
+
+    .portfolio .descJS {
+        margin: 2rem 2rem 6rem 2rem;
+    }
+
     .portfolio_container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -692,6 +710,15 @@ hr {
     
     .section_images { padding: 0; }
 
+    .portfolio .heading {
+        text-align: center;
+        margin: 3rem 2rem 0 2rem;
+    }
+
+    .portfolio .descJS {
+        margin: 2rem 2rem 6rem 2rem;
+    }
+
     .portfolio_container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -707,4 +734,13 @@ hr {
     }
 
     .section_images { padding: 0; }
+
+    .portfolio .heading {
+        text-align: center;
+        margin: 3rem 2rem 0 2rem;
+    }
+
+    .portfolio .descJS {
+        margin: 2rem 12rem 6rem 12rem;
+    }
 }
