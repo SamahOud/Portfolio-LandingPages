@@ -8,8 +8,37 @@
 }
 
 body {
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 65px 8px;
+}
+
+.big-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #1c99d4, #156974);
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-40%, 32%);
+  }
+  
+  .big-circle:after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    top: calc(50% - 180px);
+    left: calc(50% - 180px);
+  }
 
 section {
     position: relative;
@@ -18,58 +47,57 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 70px auto;
+    margin: 10px auto;
 }
 
 section .imgBox {
     width: 95%;
     height: 100%;
     position: absolute;
-    z-index: 1;
-}
-
-section .imgBox::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
 }
 
 section .imgBox img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    filter: drop-shadow(20px 20px 16px red) invert(100%);
+    /* filter: drop-shadow(20px 20px 16px red) invert(100%); */
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 1.1);
     object-fit: cover;
 }
 
 section .contentBox {
-    position: absolute;
-    top: 0;
-    right: 35px;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 50%;
-    background: rgba(210, 246, 255, 0.62);
+    /* background: rgba(210, 246, 255, 0.62); */
     z-index: 1;
 }
 
 section .contentBox .column {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .game--title {
     padding-top: 20px;
-    font-size: 35px;
+    font-size: 40px;
+}
+
+.circle {
+    border-radius: 50%;
+    background: linear-gradient(140deg, transparent 20%, #156974);
+    position: absolute;
+}
+
+.circle.two {
+    width: 130px;
+    height: 130px;
+    top: 315px;
+    left: 585px;
 }
 
 .game--container {
@@ -78,30 +106,35 @@ section .contentBox .column {
     margin: 10px;
 }
 
+.game--status {
+    font-size: 22px;
+}
+
 .cell {
     font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     color: #872828;
     box-shadow: 0 0 0 1px #333333;
     border: 2px solid #245b62;
-    background: rgba(255, 255, 255, 0.54);
+    background: rgb(255 255 255 / 89%);
     cursor: pointer;
     line-height: 50px;
-    font-size: 45px;
+    font-size: 50px;
+    font-weight: 600;
 }
 
 button {
     margin: 20px auto;
-    width: 150px;
-    height: 40px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     color: #fff;
     background-color: #156974;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -111,43 +144,58 @@ button:hover {
 }
 
 @media screen and (max-width: 576px) {
+    .big-circle {  display: none; }
+    
+    section .imgBox img { width: 100%; }
+
     section {
-        height: 460px;
+        height: 540px;
         margin: 50px auto;
     }
 
-    section .contentBox {
-        position: relative;
-        right: 0;
-        height: 75%;
-        width: 80%;
+    .circle.one {
+        width: 85px;
+        height: 85px;
+        top: -50px;
+        left: 75px;
     }
 
-    .game--title {
-        font-size: 25px;
+    .circle.two {
+        width: 85px;
+        height: 85px;
+        top: 440px;
+        left: 155px;
     }
+
+    .game--title { font-size: 30px; }
 
     .cell {
-        width: 60px;
-        height: 60px;
+        width: 75px;
+        height: 75px;
         font-size: 35px;
     }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    section .contentBox {
-        position: relative;
-        right: 0;
-        height: 75%;
-        width: 80%;
+    .big-circle {
+        bottom: 75%;
+        transform: scale(0.9) translate(-40%, 40%);
+        right: 50%;
+    }
+
+    section .imgBox img { width: 100%; }
+
+    .circle.two {
+        top: 550px;
+        left: 300px;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    section .contentBox {
-        position: relative;
-        right: 0;
-        height: 85%;
-        width: 80%;
+    section .imgBox img { width: 100%; }
+
+    .circle.two {
+        top: 550px;
+        left: 300px;
     }
 }

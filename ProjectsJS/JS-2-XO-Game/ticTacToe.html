@@ -11,34 +11,40 @@
     <link rel="stylesheet" href="./ticTacToe.css">
 </head>
 <body>
-    <section>
-        <div class="imgBox">
-            <img src="./image/bg-image-4.jpg" alt="image">
-        </div>
-
-        <div class="contentBox">
-            <div class="column">
-                <h1 class="game--title">Tic Tac Toe</h1>
-            
-                <div class="game--container">
-                    <div data-cell-index="0" class="cell"></div>
-                    <div data-cell-index="1" class="cell"></div>
-                    <div data-cell-index="2" class="cell"></div>
-                    <div data-cell-index="3" class="cell"></div>
-                    <div data-cell-index="4" class="cell"></div>
-                    <div data-cell-index="5" class="cell"></div>
-                    <div data-cell-index="6" class="cell"></div>
-                    <div data-cell-index="7" class="cell"></div>
-                    <div data-cell-index="8" class="cell"></div>
-                </div>
-        
-                <h3 class="game--status"></h3>
-        
-                <button class="game--restart">Restart Game</button>
+    <main>
+        <section>
+            <span class="big-circle"></span>
+            <span class="circle one"></span>
+            <div class="imgBox">
+                <img src="./image/bg-image-4.jpg" alt="image">
             </div>
+
+            <div class="contentBox">
+                <div class="column">
+                    <h1 class="game--title">Tic Tac Toe</h1>
+                    <span class="circle two"></span>
+                
+                    <div class="game--container">
+                        <div data-cell-index="0" class="cell"></div>
+                        <div data-cell-index="1" class="cell"></div>
+                        <div data-cell-index="2" class="cell"></div>
+                        <div data-cell-index="3" class="cell"></div>
+                        <div data-cell-index="4" class="cell"></div>
+                        <div data-cell-index="5" class="cell"></div>
+                        <div data-cell-index="6" class="cell"></div>
+                        <div data-cell-index="7" class="cell"></div>
+                        <div data-cell-index="8" class="cell"></div>
+                    </div>
             
-        </div>
-    </section>
+                    <h3 class="game--status"></h3>
+            
+                    <button class="game--restart">Restart Game</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    
 
     <script src="./ticTacToe.js"></script>
 </body>

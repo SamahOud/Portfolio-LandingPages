@@ -361,7 +361,7 @@ textarea { min-height: 100px; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    row-gap: 6.5rem;
+    row-gap: 4.5rem;
 }
 
 .portfolio_txt {
@@ -373,6 +373,10 @@ textarea { min-height: 100px; }
 
 .portfolio_txt p {
     margin-top: 1.5rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .portfolio_container .portfolio_box {
@@ -383,8 +387,8 @@ textarea { min-height: 100px; }
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
 }
 
 .portfolio_box img {
