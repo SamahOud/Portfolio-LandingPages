@@ -7,10 +7,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    /* background-color: #2196F3; */
-}
-
 main {
     display: flex;
     justify-content: center;
