@@ -171,6 +171,15 @@ h1 {
     background: #EBFEFF;
 }
 
+.picture {
+    width: auto;
+}
+
+.picture img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 /* ***** Footer Copyright ***** */
 .footer-div-span {
     display: flex;
@@ -216,7 +225,7 @@ h1 {
 
     /* .card_btn_div { } */
 
-    /* .section_img { } */
+    .article_imgs { gap: 7px; }
 }
 
 /* Small device (landscap phone, 576px and up) 576px to 768px */
@@ -243,10 +252,6 @@ h1 {
     .section_control { padding: 100px 0;}
 
     .text_ofwork { padding: 0 13%; }
-
-    /* .card_btn_div { } */
-
-    /* .section_img { } */
 }
 
 /* Medium device (tablets, 768px and up) 768px to 992px */
@@ -254,8 +259,4 @@ h1 {
     .titles { left: 80px;}
 
     .text_ofwork { padding: 0 16%; }
-
-    /* .card_btn_div { } */
-
-    /* .section_img { } */
 }
