@@ -274,7 +274,7 @@ textarea { min-height: 100px; }
 .card_image {
     display: block;
     width: 100%;
-    min-height: 200px;
+    height: 220px;
     border-radius: 5px;
 }
 
@@ -300,7 +300,7 @@ textarea { min-height: 100px; }
     opacity: .8;
 }
 
-.img_work > img { max-width: 50px; }
+.img_work > img { max-width: 85px; }
 
 .card_content > .card_text:first-of-type { margin-top: 40px; }
 
