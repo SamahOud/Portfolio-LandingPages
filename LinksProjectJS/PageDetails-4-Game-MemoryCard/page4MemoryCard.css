@@ -145,13 +145,13 @@ li, a {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1rem 2.2rem;
     background: #0ef;
     border-radius: 4rem;
     border: none;
-    margin-left: 23px;
+    margin-left: 10px;
     box-shadow: 0 0 1rem #0ef;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #323946;
     letter-spacing: .1rem;
     font-weight: 600;
@@ -194,7 +194,29 @@ li, a {
     
     .titles{ left: 8px;}
 
-    
+    .article_imgs {
+        gap: 10px;
+    }
+
+    .about_content h2 {
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 5rem 3% 5rem;
+        text-align: center;
+    }
+
+    .about_img img {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        margin-left: 8px;
+        font-size: 1.2rem;
+    }
 }
 
 /* Small device (landscap phone, 576px and up) 576px to 768px */
@@ -218,10 +240,49 @@ li, a {
 
     .titles{ left: 50px;}
 
+    .about_content h2 {
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 5rem 3% 5rem;
+        text-align: center;
+    }
+
+    .about_img img {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        margin-left: 8px;
+        font-size: 1.2rem;
+    }
 }
 
 /* Medium device (tablets, 768px and up) 768px to 992px */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .titles { left: 80px;}
+
+    .about_content h2 {
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 5rem 3% 5rem;
+        text-align: center;
+    }
+
+    .about_img img {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        margin-left: 8px;
+        font-size: 1.2rem;
+    }
 }
 
