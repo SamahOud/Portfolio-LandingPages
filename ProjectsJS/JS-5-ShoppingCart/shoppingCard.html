@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a description of the current page">
+    <meta name="keywords" content="This is a Shopping Cart">
+
+    <!-- Google's Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&family=Satisfy&display=swap"rel="stylesheet">
+
+    
+    <!-- Font-Awesome - ICON'S -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./shoppingCard.css">
+    <title>Shooping Cart</title>
+</head>
+<body>
+    <div class="container">
+        <!--  Shopping cart table wrapper  -->
+        <div id="shopping-cart">
+            <div class="txt-heading">
+                <h1>Shopping cart</h1>
+            </div>
+
+            <a onClick="emptyCart()" id="btnEmpty">Empty Cart</a>
+            
+            <table class="tbl-cart" cellpadding="10" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th class="text-left">Name</th>
+                        <th class="text-right" width="10%">Unit Price</th>
+                        <th class="text-right" width="5%">Quantity</th>
+                        <th class="text-right" width="10%">Sub Total</th>
+                    </tr>
+                </thead>
+
+                <!--  Cart table to load data on "add to cart" action -->
+                <tbody id="cartTableBody"></tbody>
+                <tfoot>
+                    <tr>
+                        <td id="itemTotal" class="text-right">Total:</td>
+                        <td id="itemCount" class="text-right" colspan="2"></td>
+                        <td id="totalAmount" class="text-right"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Product gallery shell to load HTML from JavaScript code -->
+        <div id="product-grid">
+            <div class="txt-heading">
+                <h1>Products</h1>
+                <nav>
+                    <div class="items">
+                        <span class="item active" data-name="all">All</span>
+                        <span class="item" data-name="bags">Bags</span>
+                        <span class="item" data-name="laptop">Laptop</span>
+                        <span class="item" data-name="screen">GamingScreen</span>
+                        <span class="item" data-name="camera">Camera</span>
+                        <span class="item" data-name="mouses">Mouses</span>
+                    </div>
+                </nav>
+            </div>
+            
+            <div id="product-item-container"></div>
+        </div>
+    </div>
+
+    <div class="preview-box">
+        <div class="details">
+            <span class="title">Image Category: <p>Not defined</p></span>
+            <span class="icon fas fa-times"></span>
+        </div>
+
+        <div class="image-box">
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <div class="shadow"></div>
+
+    <script src="./shoppingCard.js"></script>
+</body>
+</html>
