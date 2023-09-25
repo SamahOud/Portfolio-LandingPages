@@ -24,11 +24,11 @@ li, a {
 }
 
 /* ***** Header Nav Bar ***** */
-.titles{ 
-    display: flex; 
+.titles{
+    display: flex;
     position: absolute;
     left: 180px;
-    top: 20px;
+    top: 10px;
 }
 
 .logo {
@@ -47,7 +47,7 @@ li, a {
 }
 
 .navbar {
-    min-height: 70px;
+    min-height: 50px;
     color: black;
     display: flex;
     justify-content: end;
@@ -82,7 +82,7 @@ li, a {
 
 /* ***** Main Section Technologies Image ***** */
 .section_images{
-    padding: 10px 10%;
+    padding: 0 10%;
     background: white;
     box-shadow: 1px 1px lightgrey;
 }
@@ -101,20 +101,18 @@ li, a {
     align-items: center;
     flex-direction: row-reverse;
     gap: 5rem;
-    min-height: 70vh;
-    padding: 10rem 12% 7rem;
+    padding: 5rem 12% 5rem;
     background: #f3f3f3;
 }
 
 .about_img {
     max-width: 100%;
-    height: 100%;
+    max-height: 100%;
 }
 .about_img img {
-    width: 28vw;
     height: 55vh;
     object-fit: fill;
-    border-radius: 55px;
+    border-radius: 30px;
     transition: .5s ease;
 }
 
@@ -175,9 +173,8 @@ li, a {
 /* ======== Media's ======== */
 /* X-Small device (portrait phones, less than 576px) */
 @media screen and (min-width: 330px) and  (max-width: 576px) {
-    .navbar { 
-        display: block; 
-        min-height: 50px;
+    .navbar {
+        display: block;
     }
     
     .navbar a.menu { display: block;}
@@ -186,10 +183,10 @@ li, a {
 
     .navbar.responsive a { display: block;}
 
-    .navbar ul { 
+    .navbar ul {
         flex-direction: column;
         align-items: end;
-        margin: 20px 10px 0;
+        margin: 0 10px 0;
     }
     
     .titles{ left: 8px;}
@@ -232,10 +229,10 @@ li, a {
 
     .navbar.responsive a { display: block;}
 
-    .navbar ul { 
+    .navbar ul {
         flex-direction: column;
         align-items: end;
-        margin: 20px 10px 0;
+        margin: 0 10px 0;
     }
 
     .titles{ left: 50px;}

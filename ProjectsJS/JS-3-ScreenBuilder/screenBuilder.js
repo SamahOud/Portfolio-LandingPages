@@ -40,10 +40,13 @@ const shadowColor = document.getElementById("shadowColor");
 const marginNum = document.getElementById("marginNum");
 const paddingNum = document.getElementById("paddingNum");
 
-
+const saveBtn = document.getElementById("save");
+const addBtn = document.getElementById("add");
+const showBtn = document.getElementById("show");
+const clearBtn = document.getElementById("clear");
+const form = document.getElementById("form");
 
 // ********** Saving to LocalStorage **********
-const saveBtn = document.getElementById("save");
 if (saveBtn) {
     saveBtn.addEventListener("click", function() {
         // Get the element selector and other input elements
@@ -103,7 +106,6 @@ function displayStoredItems() {
 }
 
 // ********** Adding to the page web **********
-const addBtn = document.getElementById("add");
 if (addBtn) {
     // addBtn.addEventListener("click", displayStoredItems);
     addBtn.addEventListener("click", function() {
@@ -127,13 +129,11 @@ if (addBtn) {
 }
 
 // ********** Show saved from LocalStorage **********
-const showBtn = document.getElementById("show");
 if (showBtn) {
     showBtn.addEventListener("click", displayStoredItems);
 }
 
 // ********** Clearing the page web **********
-const clearBtn = document.getElementById("clear");
 if (clearBtn) {
     clearBtn.addEventListener("click", function() {
         // Clear the container

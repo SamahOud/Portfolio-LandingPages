@@ -201,7 +201,7 @@ body.dark .sidebar header .toggle {
 }
 
 .inputBox .bg-color {
-    height: 30px; 
+    /* height: 30px;  */
     width: 162px; 
 }
 
@@ -347,15 +347,34 @@ body.dark .switch::before {
     left: 24px;
 }
 
+input[type=submit] {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color-light);
+    background: var(--primary-color);
+    transition: var(--tran-04);
+}
+
+body.dark input[type=submit] {
+    color: var(--toggle-color);
+    background: cadetblue;
+}
+
 .sidebar .bottom-content {
     background: var(--sidebar-color);
     transition: var(--tran-05);
 }
 
 .sidebar .buttons {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     display: flex;
+    gap: 5px
 }
 
 .sidebar.close .buttons {
@@ -373,7 +392,6 @@ body.dark .switch::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px 0 0;
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -421,4 +439,26 @@ body.dark .sidebar .buttons button {
 .sidebar.close ~ .home {
     right: 55px;
     width: calc(100% - 55px);
+}
+
+@media screen and (min-width: 330px) and  (max-width: 600px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .sidebar .image {
+        min-width: 18px;
+    }
+
+    .header-text .name, .header-text .profession {
+        font-size: 16px;
+    }
+
+    select, .bg-color {
+        width: 106px;
+    }
+
+    .inputBox .bg-color {
+        width: 106px;
+    }
 }
