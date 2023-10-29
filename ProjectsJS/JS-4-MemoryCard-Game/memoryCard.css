@@ -16,6 +16,10 @@ body {
     background: #6563ff;
 }
 
+.main {
+    margin: auto;
+}
+
 .wrapper {
     height: 540px;
     width: 540px;
@@ -183,6 +187,26 @@ button {
     right: 10px;
     font-size: 30px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .results {
+        gap: 8px;
+    }
+
+    .score, .steps {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 7px 15px;
+    }
 }
 
 /* section {
