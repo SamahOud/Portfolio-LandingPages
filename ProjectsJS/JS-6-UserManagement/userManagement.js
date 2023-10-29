@@ -246,7 +246,7 @@ function showData() {
             <tr>
                 <td data-label="שם פרטי">${dataUser[i].firstname}</td>
                 <td data-label="שם משפחה">${dataUser[i].lastname}</td>
-                <td data-label="דוא"ל">${dataUser[i].email}</td>
+                <td data-label="דוא'ל">${dataUser[i].email}</td>
                 <td data-label="סיסמה">${dataUser[i].password}</td>
                 <td data-label="סטטוס" id="statusV">${dataUser[i].status}</td>
                 <td data-label="פעולות"><div class="tdBtn">
@@ -289,7 +289,7 @@ function deleteUserByName(firstName) {
 
     // Loop through the array in reverse order
     for (let i = users.length - 1; i >= 0; i--) {
-        if (users[i].firstname === firstName) {
+        if (users[i].firstname === firstName.value.toLowerCase()) {
             users.splice(i, 1); // Remove the user from the array
             deletedCount++; // Increment the deleted count
             deleteData(i);
@@ -352,7 +352,7 @@ function searchData(value) {
                 <tr>
                     <td data-label="שם פרטי">${dataUser[i].firstname}</td>
                     <td data-label="שם משפחה">${dataUser[i].lastname}</td>
-                    <td data-label="דוא"ל">${dataUser[i].email}</td>
+                    <td data-label="דוא'ל">${dataUser[i].email}</td>
                     <td data-label="סיסמה">${dataUser[i].password}</td>
                     <td data-label="סטטוס" id="statusV">${dataUser[i].status}</td>
                     <td data-label="פעולות"><div class="tdBtn">
