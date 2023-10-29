@@ -35,6 +35,7 @@ formLogin.addEventListener('submit', e => {
 });
 
 function registerUser() {
+    debugger;
     // Retrieve the list of users from local storage
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const lastUserId = users.length > 0 ? users[users.length - 1].id : 0;
@@ -60,7 +61,10 @@ function registerUser() {
             subRegister.style.background = '#2939c2';
         }
     } else {
-        validateInputs();
+        validateName();
+        validateLastName();
+        validateEmail();
+        validatePassword();
     }
 
     clearData();
