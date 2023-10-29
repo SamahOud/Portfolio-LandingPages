@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a description of the current page">
+    <meta name="keywords" content="This is a User Management">
+
+    <!-- Google's Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&family=Satisfy&display=swap"rel="stylesheet">
+
+    
+    <!-- Font-Awesome - ICON'S -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./userManagement.css">
+    <title>User Management</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>הרשמה</h1>
+            <p>להרשמה למערכת יש למלא את הטופס</p>
+        </div>
+        
+        <form action="" id="form-register">
+            <div class="inputs">
+                <label for="firstname">שם פרטי</label>
+                <input onkeyup="validateName()" type="text" class="input1" id="firstname" name="firstname" placeholder="שם פרטי"/>
+                <div class="error"></div>
+            </div>
+
+            <div class="inputs">
+                <label for="lastname">שם משפחה</label>
+                <input onkeyup="validateLastName()" type="text" class="input1" id="lastname" name="lastname" placeholder="שם משפחה"/>
+                <div class="error"></div>
+            </div>
+
+            <div class="inputs">
+                <label for="email">דוא"ל</label>
+                <input onkeyup="validateEmail()" type="email" class="input1" id="email" name="email" placeholder="john@test.com"/>
+                <div class="error"></div>
+            </div>
+
+            <div class="inputs">
+                <label for="password">סיסמה</label>
+                <input onkeyup="validatePassword()" type="password" class="input1" id="password" name="password" placeholder="סיסמה"/>
+                <div class="error"></div>
+            </div>
+            
+            <div class="inputs">
+                <button id="subRegister">הרשמה</button>
+            </div>
+        </form>
+
+        <div class="head">
+            <h1>התחברות</h1>
+            <p>להתחברות למערכת יש להזין פרטים</p>
+        </div>
+
+        <form action="" id="form-login" autocomplete="off">
+            <div class="form-input">
+                <div class="inputs">
+                    <label for="emailInput">דוא"ל</label>
+                    <input onkeyup="validateInputs()" type="email" class="input2" id="emailInput" placeholder="john.doe@test.com" />
+                    <div class="error"></div>
+                </div>
+    
+                <div class="inputs">
+                    <label for="passwordInput">סיסמה</label>
+                    <input onkeyup="validateInputs()" type="password" class="input2" id="passwordInput" placeholder="סיסמה" />
+                    <div class="error"></div>
+                </div>
+            </div>
+
+            <div class="inputs form-btn">
+                <button id="subLogin">כניסה</button>
+            </div>
+            
+        </form>
+        
+        <br><br>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="חפש">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood()" id="searchName">חפש לפי שם</button>
+                </div>
+            </div>
+
+            <div id="deleteAll"></div>
+
+            <div class="head">
+                <h1>רשימת משתמשים</h1>
+                <p>כאן אתם יכולים למחוק, לערוך משתמש</p>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>שם פרטי</th>
+                        <th>שם משפחה</th>
+                        <th>דוא"ל</th>
+                        <th>סיסמה</th>
+                        <th>סטטוס</th>
+                        <th>פעולות</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody"> 
+                    <!-- User rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./userManagement.js"></script>
+</body>
+</html>

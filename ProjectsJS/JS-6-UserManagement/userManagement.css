@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    direction: rtl;
+}
+
+.crud {
+    width: 90%;
+    margin: auto;
+}
+
+.head {
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+#form-register, #form-login {
+    display: flex;
+}
+
+#form-login {
+    flex-direction: column;
+}
+
+.form-input {
+    display: flex;
+    width: 100%;
+}
+
+.inputs {
+    width: 90%;
+    margin: 0 10px;
+}
+
+.inputs input, #search {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    transition: all .3s ease-in-out;
+}
+
+.inputs input:focus {
+    background: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#subRegister, #subLogin {
+    border-radius: 4px;
+}
+
+#subRegister {
+    margin-top: 28px;
+}
+
+.form-btn {
+    width: 100%;
+    max-width: -webkit-fill-available;
+    margin: 8px 10px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: #2939c2;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+button:hover {
+    background: #1a226f;
+    letter-spacing: 1px;
+}
+
+.searchBlock {
+    margin: 0 10px;
+}
+
+.searchBlock #search {
+    margin-bottom: 15px;
+}
+
+.searchBlock input:focus {
+    background: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#deleteAll {
+    margin: 20px 10px;
+}
+
+#delete-all, #deleteName {
+    background: #ff3300;
+}
+
+#delete-all:hover, #deleteName:hover {
+    background: #861d03;
+}
+
+.table button:hover {
+    transform: scale(1.1);
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #0f2027;
+}
+
+.table thead tr th {
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+}
+
+.table tbody tr td {
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    text-align: center;
+    padding: 12px;
+    background: #203a43;
+    border: 1px solid #dee2e685;
+}
+
+.table th, td {
+    padding: 5px;
+}
+
+.tdBtn {
+    display: flex;
+    gap: 5px;
+}
+
+.inputs .input1, .inputs .input2 {
+    border-bottom: 4px solid #a87f20;
+    outline: 0;
+}
+
+.inputs.success .input1, .inputs.success .input2 {
+    border-color: #09c372;
+}
+
+.inputs.error .input1, .inputs.error .input2 {
+    border-color: #ff3860;
+}
+
+.inputs.default .input1, .inputs.default .input2 {
+    border-color: #a87f20;
+}
+
+.fas {
+    padding-left: 6px;
+}
+
+#update {
+    background: #007bff;
+}
+
+#delete {
+    background: #ff3300;
+}
+
+#disconnect {
+    background: #ffae00;
+}
+
+@media screen and (max-width: 768px) {
+    #form-register {
+        flex-direction: column;
+    }
+
+    .inputs {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    #form-login {
+        flex-direction: column;
+    }
+
+    .form-input {
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .form-input .inputs input {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .form-btn #subLogin {
+        margin-top: 15px;
+    }
+
+    .searchBlock {
+        margin: 0;
+    }
+
+    #deleteAll {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #form-register {
+        flex-direction: column;
+    }
+    
+    .inputs {
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-input {
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .form-btn #subLogin {
+        margin-top: 15px;
+    }
+
+    .searchBlock {
+        margin: 0;
+    }
+
+    #deleteAll {
+        margin: 20px 0;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tbody tr {
+        margin-bottom: 15px;
+    }
+
+    .table tbody tr td {
+        text-align: left;
+        padding-right: 26%;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        right: 0;
+        width: 50%;
+        padding-right: 15px;
+        text-align: right;
+    }
+
+    .tdBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
