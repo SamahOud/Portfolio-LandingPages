@@ -113,7 +113,7 @@ li, a {
     height: 55vh;
     object-fit: fill;
     border-radius: 30px;
-    box-shadow: 5px 5px 5px #8080806e;
+    box-shadow: 0 0 1rem #8080806e;
     transition: .5s ease;
 }
 
