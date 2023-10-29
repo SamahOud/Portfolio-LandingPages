@@ -306,7 +306,14 @@ hr {
     a {
         transform: translate(450%, 250%);
     }
+
+    .open-popup {
+        width: 100%;
+        max-width: 72%;
+        top: 100%;
+    }
 }
+
 @media screen and (width < 1000px) { /* max-width: 800px */
 
     .container {
