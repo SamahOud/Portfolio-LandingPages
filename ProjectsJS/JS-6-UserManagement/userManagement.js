@@ -289,7 +289,7 @@ function deleteUserByName(firstName) {
 
     // Loop through the array in reverse order
     for (let i = users.length - 1; i >= 0; i--) {
-        if (users[i].firstname === firstName.value.toLowerCase()) {
+        if (users[i].firstname === firstName) {
             users.splice(i, 1); // Remove the user from the array
             deletedCount++; // Increment the deleted count
             deleteData(i);
@@ -347,7 +347,7 @@ function searchData(value) {
     let count = 0;
     let table = '';
     for (let i = 0; i < dataUser.length; i++) {
-        if (dataUser[i].firstname.includes(value)) {
+        if (dataUser[i].firstname.includes(value.toLowerCase())) {
             table += `
                 <tr>
                     <td data-label="שם פרטי">${dataUser[i].firstname}</td>
