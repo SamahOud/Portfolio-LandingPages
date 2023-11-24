@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a description of the current page">
+    <meta name="keywords" content="This is a User Management">
+
+    <!-- Google's Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Heebo:wght@100;500;600&family=Satisfy&display=swap"rel="stylesheet">
+
+    
+    <!-- Font-Awesome - ICON'S -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 50px;
+            }
+
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #f9f9f9;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            label, input {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        </style>
+    <title>User Management</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="reg_username">Username:</label>
+            <input type="text" id="reg_username" name="username" required><br>
+
+            <label for="reg_email">Email:</label>
+            <input type="email" id="reg_email" name="email" required><br>
+
+            <label for="reg_password">Password:</label>
+            <input type="password" id="reg_password" name="password" required><br>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="login_username">Username:</label>
+            <input type="text" id="login_username" name="username" required><br>
+
+            <label for="login_password">Password:</label>
+            <input type="password" id="login_password" name="password" required><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div id="userList">
+        <!-- User list will be displayed here -->
+    </div>
+
+    <script>
+        class User {
+            constructor(username, email, password, connected = true) {
+                this.username = username;
+                this.email = email;
+                this.password = password;
+                this.connected = connected;
+            }
+        }
+
+        const users = [];
+
+        function registerUser(username, email, password) {
+            const newUser = new User(username, email, password);
+            users.push(newUser);
+
+            // Update the user list
+            const userList = document.getElementById('userList');
+            const userElement = document.createElement('div');
+            userElement.classList.add('user');
+            userElement.innerHTML = `
+                <h3>Username: ${newUser.username}</h3>
+                <p>Email: ${newUser.email}</p>
+                <p>Password: ${newUser.password}</p>
+                <p>Connected: ${newUser.connected ? 'Yes' : 'No'}</p>
+            `;
+            userList.appendChild(userElement);
+
+            return newUser;
+        }
+
+        function loginUser(username, password) {
+            const user = users.find(u => u.username === username && u.password === password);
+            return user;
+        }
+
+        function displayUsers() {
+            console.table(users);
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const reg_username = document.getElementById('reg_username').value;
+            const reg_email = document.getElementById('reg_email').value;
+            const reg_password = document.getElementById('reg_password').value;
+
+            const newUser = registerUser(reg_username, reg_email, reg_password);
+            if (newUser) {
+                alert("Registration successful!");
+            } else {
+                alert("Registration failed. Please check your input.");
+            }
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const login_username = document.getElementById('login_username').value;
+            const login_password = document.getElementById('login_password').value;
+
+            const loggedInUser = loginUser(login_username, login_password);
+            if (loggedInUser) {
+                alert(`Welcome, ${loggedInUser.username}!`);
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+
+        // Example usage:
+        const user1 = registerUser("user1", "user1@example.com", "password123");
+        const user2 = registerUser("user2", "user2@example.com", "password456");
+
+        displayUsers();
+
+
+    </script>
+</body>
+</html>
