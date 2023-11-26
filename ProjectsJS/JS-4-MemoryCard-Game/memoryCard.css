@@ -21,7 +21,7 @@ body {
 }
 
 .wrapper {
-    height: 540px;
+    height: 75vh;
     width: 540px;
     padding: 25px;
     background: #f8f8f8;
@@ -95,7 +95,7 @@ body {
 }
 
 .card .back-view img {
-    max-width: 45px;
+    max-width: 60px;
 }
 
 .card.flip .front-view {
@@ -150,12 +150,17 @@ button {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background: #fff;
+    margin-top: 10px;
+    background: #8bc34a73;
     border-radius: 7px;
 }
 
 .score, .steps {
     font-size: 20px;
+}
+
+.results .div-span .score {
+    padding-right: 10px;
 }
 
 .popup {
@@ -189,210 +194,64 @@ button {
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-    .wrapper {
-        width: 100%;
-        margin: 0;
-    }
-
-    .results {
-        gap: 8px;
-    }
-
-    .score, .steps {
-        font-size: 15px;
-    }
-
-    button {
-        font-size: 15px;
-        padding: 7px 15px;
-    }
-}
-
-/* section {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #e3f2fd;
-}
-
-button {
-    font-size: 18px;
-    font-weight: 400;
-    color: #fff;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 6px;
-    background: #4070f4;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #265df2;
-}
-
-button.show-modal,
-.modal-box {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-section.active .show-modal {
-    display: none;
-}
-
-.ovelay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-}
-
-section.active .ovelay {
-    opacity: 1;
-    pointer-events: none;
-}
-
-.modal-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 380%;
-    width: 100%;
-    padding: 30px 20px;
-    border-radius: 24px;
-    background-color: #fff;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    transform: translate(-50%, -50%) scale(1.2);
-}
-
-section.active .modal-box {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-box i {
-    font-size: 70px;
-    color: #4070f4;
-}
-
-.modal-box h2 {
-    margin-top: 20px;
-    font-size: 25px;
-    font-weight: 500;
-    color: #333;
-}
-
-.modal-box h3 {
-    font-size: 13px;
-    font-weight: 400;
-    color: #333;
-    text-align: center;
-}
-
-.modal-box .buttons {
-    margin-top: 25px;
-}
-
-.modal-box button {
-    font-size: 14px;
-    padding: 6px 12px;
-    margin: 0 10px;
-} */
-
-/* .container1 {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    background-color: #000000;
-}
-
-.openModalBtn {
-    border: none;
-    outline: none;
-    background-color: #fff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.popup1 {
-    background-color: #fff;
-    width: 300px;
-    max-width: 100vw;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
+#imageInPopup {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    transition: transform 0.35s;
-    visibility: hidden;
+    width: 40%;
+    height: 65%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
 }
 
-.popup1 p{
-    padding-block: 10px;
-    color: #6563ff;
-}
 
-.closeModalBtn{
-    background-color: green;
-    color: #fff;
-    border: none;
-    outline: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.popup_open{
-    transform: translate(-50%, -50%) scale(1);
-    visibility: visible;
-}
-
-@media screen and (max-width:340px) {
-    .popup{
-        max-width: 80vw;
+@media screen and (max-width: 550px) {
+    .main {
+        width: 90%;
     }
-}
-  
-@media screen and (max-width: 530px) {
+
     .cards {
-        width: 300px;
-        height: 300px;
+        height: 80%;
     }
 
-    .card .front-view img {
-        width: 15px;
-    }
-
-    .card .back-view img {
-        max-width: 35px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .cards {
-        width: 350px;
-        height: 350px;
-    }
-
-    .card .front-view img {
-        width: 17px;
+    .card .front-view span {
+        font-size: 30px;
     }
 
     .card .back-view img {
         max-width: 40px;
     }
-} */
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 18px;
+        height: 60vh;
+    }
+
+    .results {
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .score, .steps {
+        font-size: 17px;
+    }
+
+    .results .btn button {
+        font-size: 15px;
+        padding: 7px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        width: 80%;
+    }
+
+    #imageInPopup {
+        width: 80%;
+        height: 55%;
+    }
+}

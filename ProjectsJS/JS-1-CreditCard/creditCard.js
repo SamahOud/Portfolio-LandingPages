@@ -255,17 +255,6 @@ myForm.addEventListener('submit', (event) => {
        
     // Disable the "Pay" button if any field is invalid or empty
     payButton.disabled = !isValid;
-    // Check if all input fields are valid and "Pay" button is enabled
-    // if (isValid) {
-    //     // Continue with form submission or further processing
-    //     // payButton.style.opacity = "1";
-    //     // myForm.submit();
-    // } else {
-    //     // Handle the case when the button is disabled
-    //     alert("Please fill in all the required fields correctly.");
-    //     payButton.disabled = isValid;
-    //     payButton.style.opacity = "0.5";
-    // }
 
     if (isValid) {
         payButton.style.opacity = "1";

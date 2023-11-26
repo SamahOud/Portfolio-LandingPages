@@ -24,9 +24,16 @@ function flipCard(e) {
         let cardTwoImg = cardTwo.querySelector("img").src;
         matchCards(cardOneImg, cardTwoImg);
 
-         // Increment steps counter only when the second card is flipped
-         steps++;
-         document.getElementById("steps").textContent = `Steps: ${steps}`;
+        // Increment steps counter only when the second card is flipped
+        steps++;
+        document.getElementById("steps").textContent = `Steps: ${steps}`;
+
+        // Check for win condition
+        if (matchedCard == 8) {
+            setTimeout(() => {
+                showPopup("Congratulations! You've won!");
+            }, 1000);
+        }
     }
 }
 
@@ -97,3 +104,35 @@ shuffleCard();
 cards.forEach(card => { // adding click event to all cards
     card.addEventListener("click", flipCard);
 });
+
+const popup = document.getElementById('popup');
+
+// Function to show the popup with a custom message
+function showPopup(message) {
+    const popupMessage = document.getElementById('popupMessage');
+    const popupContent = document.querySelector('.popup-content');
+    const closePopupButton = document.getElementById('closePopup');
+
+    // Set the message
+    popupMessage.textContent = message;
+    popup.setAttribute('id', 'messagePopup');
+
+    // Create an img element
+    const imageElement = document.createElement('img');
+    imageElement.setAttribute('id', 'imageInPopup');
+    imageElement.src = "./Images/winer.jpg";
+    imageElement.alt = 'Congratulations Image';
+
+    popupContent.appendChild(imageElement);
+   
+    // Show the popup
+    popup.style.display = 'block';
+
+    // Close the popup when the close button is clicked
+    closePopupButton.addEventListener('click', closePopup);
+}
+
+// Function to close the popup
+function closePopup() {
+    popup.style.display = 'none';
+}
