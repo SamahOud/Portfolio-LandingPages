@@ -37,7 +37,7 @@ h1 {
     display: flex; 
     position: absolute;
     left: 180px;
-    top: 20px;
+    top: 10px;
 }
 
 .logo {
@@ -56,7 +56,7 @@ h1 {
 }
 
 .navbar {
-    min-height: 70px;
+    min-height: 50px;
     color: black;
     display: flex;
     justify-content: end;
@@ -82,12 +82,12 @@ h1 {
     display: none;
 }
 
-.navbar li a {
+.navbar ul li a {
     font-size: 20px;
     transition: all .2s;
 }
 
-.navbar li a:hover { color: #13b2ba; }
+.navbar ul li a:hover { color: #13b2ba; }
 
 /* ***** Main Section About The Works ***** */
 .section_control {
@@ -209,7 +209,7 @@ h1 {
     .navbar ul { 
         flex-direction: column;
         align-items: end;
-        margin: 20px 10px 0;
+        margin: 0 10px 0;
     }
     
     .titles{ left: 8px;}
@@ -222,8 +222,6 @@ h1 {
     }
 
     .text_ofwork { padding: 0; }
-
-    /* .card_btn_div { } */
     
     .article_imgs { gap: 7px; }
 }
@@ -244,7 +242,7 @@ h1 {
     .navbar ul { 
         flex-direction: column;
         align-items: end;
-        margin: 20px 10px 0;
+        margin: 0 10px 0;
     }
 
     .titles{ left: 50px;}

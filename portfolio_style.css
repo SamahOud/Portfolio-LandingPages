@@ -41,6 +41,7 @@ input, textarea {
     width: 400px;
     height: 50px;
     padding: 5px 10px;
+    text-align: right;
 }
 
 textarea { min-height: 100px; }
