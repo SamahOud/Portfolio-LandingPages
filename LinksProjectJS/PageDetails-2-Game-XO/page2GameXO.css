@@ -101,7 +101,7 @@ li, a {
     align-items: center;
     flex-direction: row-reverse;
     gap: 5rem;
-    padding: 5rem 12% 5rem;
+    padding: 5rem 8% 5rem;
     background: #EBFEFF;
 }
 
@@ -137,23 +137,21 @@ li, a {
 }
 
 .about_content p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 2rem 0 3rem;
-    line-height: 1.7;
     color: #2F2E2E;
 }
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.2rem;
+    padding: 0.5rem 1.2rem;
     background: #0ef;
     border-radius: 4rem;
     border: none;
     margin-left: 10px;
     box-shadow: 0 0 1rem #0ef;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: #323946;
-    letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
 }
@@ -212,9 +210,9 @@ li, a {
     }
 
     .btn {
-        padding: 1rem 2rem;
+        /* padding: 1rem 2rem; */
         margin-left: 8px;
-        font-size: 1.2rem;
+        /* font-size: 1.2rem; */
     }
 }
 
@@ -254,9 +252,9 @@ li, a {
     }
 
     .btn {
-        padding: 1rem 2rem;
+        /* padding: 1rem 2rem; */
         margin-left: 8px;
-        font-size: 1.2rem;
+        /* font-size: 1.2rem; */
     }
 }
 
@@ -279,9 +277,9 @@ li, a {
     }
 
     .btn {
-        padding: 1rem 2rem;
+        /* padding: 1rem 2rem; */
         margin-left: 8px;
-        font-size: 1.2rem;
+        /* font-size: 1.2rem; */
     }
 }
 
