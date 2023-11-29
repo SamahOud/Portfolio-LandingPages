@@ -1,7 +1,6 @@
 # Landing-Page-6
 
-Welcome to Login Coffee Landing Page - 6! Our designed landing page provides a seamless login experience for users. With a user-friendly interface. Enter your details and enjoy.
-
+This is a login screen/landing page for the coffee project.
 This project was built using pure HTML5 & CSS3 & Bootstrap.
 This project as the other is fully responsive, so you can use it on mobile such as the desktop.
 
