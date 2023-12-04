@@ -168,6 +168,11 @@ textarea { min-height: 100px; }
     align-items: center;
 }
 
+.article_imgs img {
+    width: 100px;
+    height: 100px;
+}
+
 /* ***** Main Section Top About Me ***** */
 .section_aboutme {
     direction: rtl;
